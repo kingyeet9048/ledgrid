@@ -7,11 +7,11 @@
             <div id="loginContainer">
                 <form action="php/action.php" method="POST">
                     <p id="p1"></p>
-                    <input type="text" placeholder="Username" name="username" id="username" required>
+                    <input type="text" placeholder="Username" name="username" id="username" value="" required>
                     <br>
                     <input type="password" placeholder="Password" name="password" id="password" required>
                     <br>
-                    <button type="submit">Login</button>
+                    <button type="submit" class="btn btn-outline-light">Login</button>
                 </form>
             </div>
         </div>
@@ -19,7 +19,7 @@
             if($_GET['failed'] == 1) {
                 echo '<script type="text/javascript">document.getElementById("p1").innerHTML = "Username or password is incorrect. Please try again.";</script>';
             }
-            echo "<script type='text/javascript'>document.getElementById('username').value = ".$_GET['username'].";</script>";
+            echo "<script type='text/javascript'>document.getElementById('username').value = '".$_GET['username']."';</script>";
         ?>
     </body>
 </html>

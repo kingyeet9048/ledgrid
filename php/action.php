@@ -18,7 +18,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
        header('Location: ../HTML/home.php');
     }
     else {
-       header('Location: ../index.php?failed=1&username='.$correctUser);
+       header('Location: ../index.php?failed=1&username='.$user);
     }
 
 }
