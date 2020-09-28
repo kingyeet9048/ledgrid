@@ -8,15 +8,17 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     $correctUser = fgets($myfile);
     $correctPass = fgets($myfile);
 
-    $correctUser = strval(  $correctUser );
-    $correctPass = strval(  $correctPass );
+    $correctUser = trim(strval(  $correctUser ));
+    $correctPass = trim(strval(  $correctPass ));
+    echo $user.$pass;
+    echo $correctUser.$correctPass;
 
     fclose($myfile);
     if($user == $correctUser && $pass == $correctPass) {
-        header('Location: ../HTML/home.php');
+       header('Location: ../HTML/home.php');
     }
     else {
-        header('Location: ../index.php?failed=1');
+       header('Location: ../index.php?failed=1&username='.$correctUser);
     }
 
 }
