@@ -3,8 +3,16 @@
 if($_SERVER["REQUEST_METHOD"] == "POST") {
     $user = $_POST['username'];
     $pass = $_POST['password'];
-    
-    if($user == $pass) {
+    $myfile = fopen("/home/sbada9048/secure_pass", "r") or die("unable to open file!");
+
+    $correctUser = fgets($myfile);
+    $correctPass = fgets($myfile);
+
+    $correctUser = strval(  $correctUser );
+    $correctPass = strval(  $correctPass );
+
+    fclose($myfile);
+    if($user == $correctUser && $pass == $correctPass) {
         header('Location: ../HTML/home.php');
     }
     else {
