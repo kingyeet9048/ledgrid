@@ -3,13 +3,14 @@
 if($_SERVER["REQUEST_METHOD"] == "POST") {
     $user = $_POST['username'];
     $pass = $_POST['password'];
-
-    if(empty($user)) {
-        echo "Username is empty";
+    
+    if($user == $pass) {
+        header('Location: ../HTML/home.php');
     }
     else {
-        echo "Username is " + $user;
+        header('Location: ../index.php?failed=1');
     }
+
 }
 
 
