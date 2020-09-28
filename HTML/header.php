@@ -2,5 +2,7 @@
     <title>LEDGRID</title>
     <meta charset="UTF-8">
     <meta name="author" content="Sulaiman Bada">
-    <link rel="stylesheet" type="text/css" href="styles/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./styles/styles.css">
+    <script type="text/javascript" href="./javascript/login.js"></script>
 </head>

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-    
+    <?php include('header.php'); ?>
     <body>
         <div id="nav">
             <ul id="nav-content">
@@ -9,7 +9,7 @@
             </ul>
         </div>
         <div id="main">
-            <header class="center" style="font-size: 30px;">WSU CS Project - LedGrid</header>
+            <header class="center" style="font-size: 30px; padding-top: 60px;">WSU CS Project - LedGrid</header>
         </div>
     </body>
 </html>
