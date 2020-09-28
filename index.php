@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
     <?php include('HTML/header.php'); ?>
     <body>
         <div class='main'>
@@ -17,9 +17,9 @@
         </div>
         <?php 
             if($_GET['failed'] == 1) {
-                echo '<script type="text/javascript">document.getElementById("p1").innerHTML = "Username or password is incorrect. Please try again.";</script>';
+                echo '<script>document.getElementById("p1").innerHTML = "Username or password is incorrect. Please try again.";</script>';
             }
-            echo "<script type='text/javascript'>document.getElementById('username').value = '".$_GET['username']."';</script>";
+            echo "<script>document.getElementById('username').value = '".$_GET['username']."';</script>";
         ?>
     </body>
 </html>

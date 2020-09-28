@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
     <?php include('header.php'); ?>
     <body>
         <div id="nav">
