@@ -13,3 +13,16 @@
         </div>
     </body>
 </html>
+<?php 
+        $session = $_GET['session'];
+        $myfile = fopen("/home/sbada9048/secure_pass", "r") or die("unable to open file!");
+        fgets($myfile);
+        fgets($myfile);
+        $correctSession = trim(fgets($myfile));
+        fclose($myfile);
+        if ($session == $correctSession) {
+        }
+        else {
+            header('Location: ../index.php?failed=2');
+        }
+?>

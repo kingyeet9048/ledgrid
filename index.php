@@ -19,6 +19,9 @@
             if($_GET['failed'] == 1) {
                 echo '<script>document.getElementById("p1").innerHTML = "Username or password is incorrect. Please try again.";</script>';
             }
+            else if ($_GET['failed'] == 2) {
+                echo '<script>document.getElementById("p1").innerHTML = "Please verify your credentials and login.";</script>';
+            }
             echo "<script>document.getElementById('username').value = '".$_GET['username']."';</script>";
         ?>
     </body>

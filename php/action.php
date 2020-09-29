@@ -7,6 +7,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $correctUser = fgets($myfile);
     $correctPass = fgets($myfile);
+    $correctSession = fgets($myfile);
 
     $correctUser = trim(strval(  $correctUser ));
     $correctPass = trim(strval(  $correctPass ));
@@ -15,7 +16,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 
     fclose($myfile);
     if($user == $correctUser && $pass == $correctPass) {
-       header('Location: ../HTML/home.php');
+       header('Location: ../HTML/home.php?session='.$correctSession);
     }
     else {
        header('Location: ../index.php?failed=1&username='.$user);
