@@ -2,14 +2,13 @@
 <html lang="en-US">
     <?php include('header.php'); ?>
     <body>
-        <div id="nav">
-            <ul id="nav-content">
-                <li><a href="#Home">Home</a></li>
-                <li><a href="#Send_Message">Send Message</a></li>
-            </ul>
-        </div>
+        <?php include('navbar.php'); ?>
         <div id="main">
             <header class="center" style="font-size: 30px; padding-top: 60px;">WSU CS Project - LedGrid</header>
+            <!-- <input type="text" placeholder="Message" name="Message" id="Message" value="" required> -->
+            <div class="content">
+                <h1>What is it?</h1>
+            </div>
         </div>
     </body>
 </html>

@@ -66,8 +66,19 @@ header {
     font-size: 140%;
     margin-left: 1em;
     margin-right: 1em;
+    position: relative;
+    min-height: 100vh;
 }
 
+#content {
+    padding-bottom: 2.5rem;
+}
+
+#footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
 .center {
     text-align: center;
 }
