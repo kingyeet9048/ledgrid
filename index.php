@@ -15,6 +15,7 @@
                 </form>
             </div>
         </div>
+        <!-- Variables will be by the url for failed login or timeout.  -->
         <?php 
             if($_GET['failed'] == 1) {
                 echo '<script>document.getElementById("p1").innerHTML = "Username or password is incorrect. Please try again.";</script>';
