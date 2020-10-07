@@ -1,3 +1,5 @@
+<!-- With the head in a new page, I can make as many pages and 
+reuse the head as many times as I want. Makes for more efficient code. -->
 <head>
     <title>LEDGRID</title>
     <meta charset="UTF-8">

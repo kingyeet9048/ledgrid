@@ -1,3 +1,5 @@
+<!-- Start of the session. Meant to keep people from staying on the page
+for too long.  -->
 <script src="../javascript/session.js"></script>
 <!DOCTYPE html>
 <html lang="en-US">
@@ -12,6 +14,8 @@
         </div>
     </body>
 </html>
+<!-- Checks the session id. If the Session ID is incorrect, it will
+redirect the user back to the login screen to relogin. -->
 <?php 
     $session = $_GET['session'];
     $myfile = fopen("/home/sbada9048/secure_pass", "r") or die("unable to open file!");

@@ -1,16 +1,24 @@
 <!DOCTYPE html>
 <html lang="en-US">
+    <!-- Include the head -->
     <?php include('HTML/header.php'); ?>
     <body>
+        <!-- Entire page -->
         <div class='main'>
             <header class="center">WSU CS Project - LedGrid</header>
+            <!-- Anything that has to do with the login. -->
             <div id="loginContainer">
+                <!-- Everything will process so fast in the form, you wont
+                even notice the switch. Basically redirects. -->
                 <form action="php/action.php" method="POST">
                     <p id="p1"></p>
                     <input type="text" placeholder="Username" name="username" id="username" value="" required>
                     <br>
                     <input type="password" placeholder="Password" name="password" id="password" required>
                     <br>
+                    <!-- Bootstrapped the css of the button. All I have to do is 
+                    Call the class of the style I want to use. Makes for simplier
+                    and faster programming. -->
                     <button type="submit" class="btn btn-outline-light" onclick="en();">Login</button>
                 </form>
             </div>
@@ -23,6 +31,7 @@
             else if ($_GET['failed'] == 2) {
                 echo '<script>document.getElementById("p1").innerHTML = "Please verify your credentials and login.";</script>';
             }
+            // Echo the username back into the textbox to make it more user friendly.
             echo "<script>document.getElementById('username').value = '".$_GET['username']."';</script>";
         ?>
     </body>
