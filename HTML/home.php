@@ -2,6 +2,7 @@
 for too long.  -->
 <script src="../javascript/session.js"></script>
 <!DOCTYPE html>
+<!-- Information page. -->
 <html lang="en-US">
     <?php include('header.php'); ?>
     <body>
