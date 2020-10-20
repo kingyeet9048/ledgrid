@@ -3,7 +3,7 @@
 if($_SERVER["REQUEST_METHOD"] == "POST") {
     $user = $_POST['username'];
     $pass = $_POST['password'];
-    $myfile = fopen("/home/sbada9048/secure_pass", "r") or die("unable to open file!");
+    $myfile = fopen("../../secure_pass", "r") or die("unable to open file!");
 
     $correctUser = fgets($myfile);
     $correctPass = fgets($myfile);
