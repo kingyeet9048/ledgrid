@@ -26,6 +26,18 @@ header {
     color: white;
 }
 
+th, td {
+    padding-right: 1em;
+}
+
+td {
+    text-align: left;
+}
+
+table {
+    margin-bottom: 2em;
+}
+
 #p1 {
     color: red;
 }
@@ -64,14 +76,17 @@ header {
 
 #main {
     font-size: 140%;
-    margin-left: 1em;
-    margin-right: 1em;
+    margin-left: 10%;
+    margin-right: 10%;
     position: relative;
     min-height: 100vh;
 }
 
 #content {
     padding-bottom: 2.5rem;
+    text-align: center;
+    margin: 10% auto 0 auto;
+    color: white;
 }
 
 #footer {
