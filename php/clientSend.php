@@ -9,21 +9,21 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     $host = "localhost"; 
     $port = 4444;
     $data = strval( $panel01."&".$panel02."&".$panel03 );
+    $result = "";
 
-    if ( ($socket = socket_create(AF_INET, SOCK_STREAM, SOL_TCP)) === FALSE )
-        echo "socket_create() failed: reason: " .             socket_strerror(socket_last_error());
+    if ( ($socket = socket_create(AF_INET, SOCK_STREAM, SOL_TCP)) === FALSE ) {
+        $result = socket_strerror(socket_last_error());
+    }
     else 
     {
-        echo "Attempting to connect to '$host' on port '$port'...<br>";
-        if ( ($result = socket_connect($socket, $host, $port)) === FALSE )
-            echo "socket_connect() failed. Reason: ($result) " .     socket_strerror(socket_last_error($socket));
+        if ( ($result = socket_connect($socket, $host, $port)) === FALSE ) {
+            $result = "Attempted to connect to '$host' on port '$port' and get an error of: ".socket_strerror(socket_last_error($socket));
+        }
         else {
-            echo "Sending data...<br>";
             socket_write($socket, $data."\r\n", strlen($data."\r\n"));
-            echo "OK<br>";
+            $result = "Attempted to connect to '$host' on port '$port'. It was sucessfull. Message sent!";
         }
         socket_close($socket);      
     }
 }
-
 ?>
