@@ -1,5 +1,5 @@
 OPC opc;
-String[] recieved = new String[3];
+String[] recieved;
 Server server;
 //what happans when the program first starts...like the start function in unity. 
 void setup()
@@ -8,6 +8,7 @@ void setup()
    try {
       //ServerSocket Setup
       server = new Server();
+      recieved = new String[server.numberOfPanels];
       server.start();
       recieved = server.messages;
    }

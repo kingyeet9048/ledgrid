@@ -19,7 +19,7 @@ import java.io.IOException;
 public class ledgrid extends PApplet {
 
 OPC opc;
-String[] recieved = new String[3];
+String[] recieved;
 Server server;
 //what happans when the program first starts...like the start function in unity. 
 public void setup()
@@ -28,6 +28,7 @@ public void setup()
    try {
       //ServerSocket Setup
       server = new Server();
+      recieved = new String[server.numberOfPanels];
       server.start();
       recieved = server.messages;
    }

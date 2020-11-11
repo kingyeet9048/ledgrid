@@ -1,9 +1,9 @@
 <?php
 
 if($_SERVER["REQUEST_METHOD"] == "POST") {
-    $panel01 = $_POST['panel01'];
-    $panel02 = $_POST['panel02'];
-    $panel03 = $_POST['panel03'];
+    $panel01 = $_POST['panel01'] != '' ? $_POST['panel01'] : ' ';
+    $panel02 = $_POST['panel02'] != '' ? $_POST['panel02'] : ' ';
+    $panel03 = $_POST['panel03'] != '' ? $_POST['panel03'] : ' ';
 
 
     $host = "localhost"; 
@@ -29,10 +29,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 ?>
 
 <html lang="en-US">
-    <?php include('../HTML/header.php'); ?>
+    <?php include('../HTML/header.php'); include('GetSessionID.php'); ?>
     <script>
         function pageRedirect() {
-            window.location.href = "../HTML/SendMessage.php";
+            window.location.href ="<?php echo "../HTML/SendMessage.php".getSession();?>";
         }      
     </script>
     <body id="main">

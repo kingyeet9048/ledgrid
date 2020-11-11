@@ -39,7 +39,6 @@ function resetSession() {
     }
 }
 
+console.log('Starting Timer...');
 setCookie("Session", "Winona", 10);
-
 setTimeout(resetSession, 600000);
-

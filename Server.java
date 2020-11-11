@@ -4,7 +4,8 @@ import java.net.Socket;
 import java.io.IOException;
 
 public class Server extends Thread {
-    public static String[] messages = new String[3];
+    protected static int numberOfPanels = 3;
+    protected static String[] messages = new String[numberOfPanels];
     public void run() {
         try {
             final int portNumber = 4444;
