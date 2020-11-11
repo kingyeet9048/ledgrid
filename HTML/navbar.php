@@ -5,6 +5,6 @@
         <li><a href="<?php echo "SendMessage.php".getSession();?>">Send Message</a></li>
         <!-- Start of the session. Meant to keep people from staying on the page
         for too long.  -->
-        <script src="../javascript/session.js"></script> 
+        <link type="text/javascript" href="../javascript/session.js">
     </ul>
 </div>
