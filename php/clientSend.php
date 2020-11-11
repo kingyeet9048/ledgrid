@@ -27,3 +27,20 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 ?>
+
+<html lang="en-US">
+    <?php include('../HTML/header.php'); ?>
+    <script>
+        function pageRedirect() {
+            window.location.href = "../HTML/SendMessage.php";
+        }      
+    </script>
+    <body id="main">
+        <div id="content">
+            <div class='alert alert-warning alert-dismissible fade show' role="alert">
+                <p><?php echo $result; ?></p>
+            </div>
+            <button type="button" class="btn btn-outline-light" onclick="pageRedirect();">Send Another Message?</button>
+        </div>
+    </body>
+</html>

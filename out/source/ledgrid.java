@@ -37,6 +37,7 @@ public void setup()
   //size of the window
   
   
+  
   //creates a new connection in the for of an object to the fadecandy devices. 
   //also connects to the local host. 
   opc = new OPC(this, "199.17.162.75", 7890);
