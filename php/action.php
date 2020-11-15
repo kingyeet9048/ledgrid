@@ -12,8 +12,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     $correctUser = md5(trim(strval(  $correctUser )));
     $correctPass = md5(trim(strval(  $correctPass )));
    //  echo $user.$pass;
-   //  echo $correctUser.$correctPass;
-
+     //echo $correctUser.$correctPass;
+   print_r($_POST);
     fclose($myfile);
     if($user == $correctUser && $pass == $correctPass) {
        echo 'HTML/home.php?session='.$correctSession;
