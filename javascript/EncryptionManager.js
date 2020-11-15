@@ -1,13 +1,33 @@
 function en() {
-    var encryptedUser = CryptoJS.AES.encrypt(document.getElementById("username").value, "SweetTea");
-    var encryptedPass = CryptoJS.AES.encrypt(document.getElementById("password").value, "SweetTea");
-    //U2FsdGVkX18ZUVvShFSES21qHsQEqZXMxQ9zgHy+bu0=
-    
-    //var decrypted = CryptoJS.AES.decrypt(encrypted, "SweetTea");
-    //4d657373616765
-    
-    //document.getElementById("username").value = encryptedUser;
-    //document.getElementById("password").value = encryptedPass;
-   // document.getElementById("demo2").innerHTML = decrypted;
-    //document.getElementById("demo3").innerHTML = decrypted.toString(CryptoJS.enc.Utf8);
+    var postForm = { //Fetch form data
+        'username'     : $('input[name=username]').val(), //Store name fields value
+        'password'     : $('input[name=password]').val() //Store name fields value
+    };
+
+    var encryptedUser = '';
+    var encryptedPass = '';
+    $.ajax({
+        url: "../php/encrypt.php",
+        type: "post",
+        data: postForm,
+        success: function (response) {
+            encryptedUser = response.split("&")[0].toString();
+            encryptedPass = response.split("&")[1].toString();
+        }
+    });
+
+    alert('Username: ' + encryptedUser + ' Password: ' + encryptedPass);
+
+    var xhr = new XMLHttpRequest();
+    //xhr.setRequestHeader('Content-Type', 'application/json');
+    xhr.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            window.location.href = this.responseText.toString();
+        }
+      };
+    xhr.open("POST", 'php/action.php', true);
+    xhr.send(JSON.stringify({
+        username: encryptedUser,
+        password: encryptedPass
+    }));
 }
