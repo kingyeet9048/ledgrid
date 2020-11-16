@@ -16,7 +16,7 @@
 redirect the user back to the login screen to relogin. -->
 <?php 
     $session = $_GET['session'];
-    $myfile = fopen("/home/sbada9048/secure_pass", "r") or die("unable to open file!");
+    $myfile = fopen("../../secure_pass", "r") or die("unable to open file!");
     fgets($myfile);
     fgets($myfile);
     $correctSession = trim(fgets($myfile));
