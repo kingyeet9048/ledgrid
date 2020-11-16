@@ -6,7 +6,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     $panel03 = $_POST['panel03'] != '' ? $_POST['panel03'] : ' ';
 
 
-    $host = "localhost"; 
+    $host = "199.17.162.75"; 
     $port = 4444;
     $data = strval( $panel01."&".$panel02."&".$panel03 );
     $result = "";
