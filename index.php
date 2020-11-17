@@ -19,7 +19,7 @@
                     <!-- Bootstrapped the css of the button. All I have to do is 
                     Call the class of the style I want to use. Makes for simplier
                     and faster programming. -->
-                    <button type="submit" class="btn btn-outline-light" onclick="en();">Login</button>
+                    <button type="button" class="btn btn-outline-light" onclick="en();">Login</button>
                 </form>
             </div>
         </div>

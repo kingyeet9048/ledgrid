@@ -1,28 +1,32 @@
 <?php
 
-if($_SERVER["REQUEST_METHOD"] == "POST") {
-    $user = $_POST['username'];
-    $pass = $_POST['password'];
-    $myfile = fopen("../../secure_pass", "r") or die("unable to open file!");
+   
+   ini_set ('display_errors',1);
+   error_reporting (E_ALL & ~ E_NOTICE);
 
-    $correctUser = fgets($myfile);
-    $correctPass = fgets($myfile);
-    $correctSession = fgets($myfile);
+   $rawdata = file_get_contents("php://input");
+   $decodedData = json_decode($rawdata);
+   $user = $decodedData->username;
+   $pass = $decodedData->password;
+   $myfile = fopen("../../secure_pass", "r") or die("unable to open file!");
 
-    $correctUser = trim(strval(  $correctUser ));
-    $correctPass = trim(strval(  $correctPass ));
-    echo $user.$pass;
-    echo $correctUser.$correctPass;
+   $correctUser = (fgets($myfile));
+   $correctPass = (fgets($myfile));
+   $correctSession = fgets($myfile);
 
-    fclose($myfile);
-    if($user == $correctUser && $pass == $correctPass) {
-       header('Location: ../HTML/home.php?session='.$correctSession);
-    }
-    else {
-       header('Location: ../index.php?failed=1&username='.$user);
-    }
+   $correctUser = trim(strval(  $correctUser ));
+   $correctPass = trim(strval(  $correctPass ));
+   echo 'usr: '.$user;
+   echo 'correctuser: '.$correctUser;
+   //  echo $correctUser.$correctPass;
 
-}
+   fclose($myfile);
+   if($user == $correctUser && $pass == $correctPass) {
+      //echo '../HTML/home.php?session='.$correctSession;
+   }
+   else {
+      //echo '../index.php?failed=1&username='.$user;
+   }
 
 
 ?>
