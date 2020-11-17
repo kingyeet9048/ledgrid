@@ -1,15 +1,20 @@
 body {
     font-family: 'Titillium Web', sans-serif;
-    background-color: purple;
+    background-color: rgb(85, 28, 85);
 }
 
 li a {
-    text-decoration: none;
-    color: purple;
+    border-radius: 25px;
+    padding: 9px;
+    margin: 35px;
+    background-color: rgb(85, 28, 85);
+    
+    color: rgb(216, 213, 213);
 }
 
 a:hover {
-    text-decoration: underline;
+    text-shadow: 0px 0px 9px rgb(255,255,255);
+    color: rgb(255, 255, 255);
 }
 
 input[type=text], input[type=password] {
@@ -22,7 +27,7 @@ input[type=text], input[type=password] {
 
 header {
     font-size: 30px;
-    text-shadow: 0px 0px 5px rgb(255,255,255);
+    text-shadow: 0px 0px 2px rgb(255,255,255);
     color: white;
 }
 
@@ -52,6 +57,7 @@ table {
 
 #nav {
     margin: auto;
+    margin: bottom 25px;
     padding: auto;
     position: fixed;
     height: 45px;
@@ -76,8 +82,8 @@ table {
 
 #main {
     font-size: 140%;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 0%;
+    margin-right: 0%;
     position: relative;
     min-height: 100vh;
 }
@@ -99,9 +105,17 @@ table {
 }
 /* The animation code */
 @keyframes slide {
-    0%   {background-color:red; left:0px; top:0px;}
-    25%  {background-color:yellow; left:200px; top:0px;}
-    50%  {background-color:blue; left:200px; top:200px;}
-    75%  {background-color:green; left:0px; top:200px;}
-    100% {background-color:rgb(255, 255, 255); left:0px; top:0px;}
+    0%   {right:7000px; }
+    25%   {right:300x; }
+    50%  { right:200px; }
+    75%  {right:100px;}
+    100%  {right:0px; }
   }
+  div {
+    width: 200x;
+    height: 25px;
+    animation-name: slide;
+    animation-duration: 2.3s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;};
+   

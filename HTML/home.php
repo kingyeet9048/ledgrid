@@ -10,6 +10,9 @@
             <div id="content">
             </div>
         </div>
+        <p>
+            
+        </p>
     </body>
 </html>
 <!-- Checks the session id. If the Session ID is incorrect, it will
