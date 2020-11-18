@@ -16,16 +16,16 @@
 
    $correctUser = trim(strval(  $correctUser ));
    $correctPass = trim(strval(  $correctPass ));
-   echo 'usr: '.$user;
-   echo 'correctuser: '.$correctUser;
+   //echo 'usr: '.$user;
+   //echo 'correctuser: '.$correctUser;
    //  echo $correctUser.$correctPass;
 
    fclose($myfile);
    if($user == $correctUser && $pass == $correctPass) {
-      //echo '../HTML/home.php?session='.$correctSession;
+      echo 'HTML/home.php?session='.$correctSession;
    }
    else {
-      //echo '../index.php?failed=1&username='.$user;
+      echo 'index.php?failed=1&username='.$user;
    }
 
 

@@ -8,6 +8,7 @@ redirect the user back to the login screen to relogin. -->
     $correctSession = trim(fgets($myfile));
     fclose($myfile);
     if ($session == $correctSession) {
+        echo "sucesss";
     }
     else {
         header('Location: ../index.php?failed=2');

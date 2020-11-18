@@ -24,6 +24,7 @@ function getCookie(cname) {
 function resetSession() {
     var session = getCookie('Session');
     if(session != "") {
+        setTimeout(window.location.href = "../index.php", 300000);
         if(confirm("You have been inactive. Wish to continue?")) {
             setTimeout(resetSession, 600000);
             session = getCookie('N?A');
@@ -31,7 +32,7 @@ function resetSession() {
         }
         else {
             document.cookie = "Session=Winona; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-            window.location.href = "home.php";
+            window.location.href = "../index.php";
         }
     }
     else {
@@ -41,4 +42,4 @@ function resetSession() {
 
 console.log('Starting Timer...');
 setCookie("Session", "Winona", 10);
-setTimeout(resetSession, 600000);
+setTimeout(resetSession, 300000);
