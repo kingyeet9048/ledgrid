@@ -11,8 +11,8 @@
                     <form action="../php/clientSend.php" method="POST">
                         <table>
                             <tr>
-                                <th>Messages</th>
-                                <th>Panels</th>
+                                <th id="messages">Messages</th>
+                                <th id="panels">Panels</th>
                             </tr>
                             <tr>
                                 <td>
