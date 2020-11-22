@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<?php include('../php/sessionchecker.php'); ?>
 <script type="text/javascript" src="../javascript/session.js"></script>
 <html lang="en-US">
     <?php include('header.php'); ?>
@@ -53,3 +52,4 @@
         </div>
     </body>
 </html>
+<?php include('../php/sessionchecker.php'); ?>

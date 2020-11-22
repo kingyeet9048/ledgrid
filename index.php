@@ -20,6 +20,7 @@
                     Call the class of the style I want to use. Makes for simplier
                     and faster programming. -->
                     <button type="button" class="btn btn-outline-light" onclick="en();">Login</button>
+                    <!-- <button type="submit" class="btn btn-outline-light">Login</button> -->
                 </form>
             </div>
         </div>
