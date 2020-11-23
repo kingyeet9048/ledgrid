@@ -9,8 +9,8 @@
    //gettting the raw data from xmlhttpsrequest
    $rawdata = file_get_contents("php://input");
    $decodedData = json_decode($rawdata);
-   $user = $decodedData->username;
-   $pass = $decodedData->password;
+   $user = str_replace('"', '', $decodedData->username);
+   $pass = str_replace('"', '', $decodedData->password);
 
    $myfile = fopen("../../secure_pass", "r") or die("unable to open file!");
    $correctUser = (fgets($myfile));

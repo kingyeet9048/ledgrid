@@ -7,14 +7,15 @@ redirect the user back to the login screen to relogin. -->
     // $correctSession = trim(fgets($myfile));
     // fclose($myfile);
     // include("../php/SessionHandler.php");
-    $session = $_GET['session'];
+    $session = $_GET['sess'];
     $data = Session::getInstance();
     $data->startSession();
     $correctSession = session_id();
     if ($session == $correctSession) {
-        echo "<script>alert('works');</script>";
+        //echo "<script>alert('works');</script>";
     }
     else {
-        //header('Location: ../index.php?failed=2');
+        //echo "<script>alert('noworks');</script>";
+        header('Location: ../index.php?failed=2');
     }
 ?>
