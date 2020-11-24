@@ -1,4 +1,5 @@
 function en() {
+    //putting the strings around it so the value doesnt change.
     var encryptedUser = '"' + CryptoJS.SHA256(document.getElementById('username').value.toString()) + '"';
     var encryptedPass = '"' + CryptoJS.SHA256(document.getElementById('password').value.toString()) + '"';
     // alert('Username: ' + encryptedUser + ' Password: ' + encryptedPass);

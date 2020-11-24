@@ -9,6 +9,7 @@
    //gettting the raw data from xmlhttpsrequest
    $rawdata = file_get_contents("php://input");
    $decodedData = json_decode($rawdata);
+   //removing the strings and getting the raw sha256 output
    $user = str_replace('"', '', $decodedData->username);
    $pass = str_replace('"', '', $decodedData->password);
 
@@ -23,6 +24,7 @@
    $correctPass = trim(strval(  $correctPass ));
 
    fclose($myfile);
+   //comparing the encrypted credentials
    if($user == $correctUser && $pass == $correctPass) {
       echo 'HTML/home.php?sess='.$correctSession;
    }
