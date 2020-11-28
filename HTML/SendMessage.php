@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<?php include('../php/sessionchecker.php'); ?>
 <script type="text/javascript" src="../javascript/session.js"></script>
 <html lang="en-US">
     <?php include('header.php'); ?>
@@ -12,8 +11,8 @@
                     <form action="../php/clientSend.php" method="POST">
                         <table>
                             <tr>
-                                <th>Messages</th>
-                                <th>Panels</th>
+                                <th id="messages">Messages</th>
+                                <th id="panels">Panels</th>
                             </tr>
                             <tr>
                                 <td>
@@ -53,3 +52,4 @@
         </div>
     </body>
 </html>
+<?php include('../php/sessionchecker.php'); ?>

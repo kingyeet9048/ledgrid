@@ -2,6 +2,20 @@
 <html lang="en-US">
     <!-- Include the head -->
     <?php include('HTML/header.php'); ?>
+    <script>
+        $(document).ready(function(){
+            $('#username').keypress(function(e){
+                if(e.keyCode==13)
+                    $('#submit').click();
+            });
+        });
+        $(document).ready(function(){
+            $('#password').keypress(function(e){
+                if(e.keyCode==13)
+                    $('#submit').click();
+            });
+        });
+    </script>
     <body>
         <!-- Entire page -->
         <div class='main'>
@@ -19,7 +33,7 @@
                     <!-- Bootstrapped the css of the button. All I have to do is 
                     Call the class of the style I want to use. Makes for simplier
                     and faster programming. -->
-                    <button type="button" class="btn btn-outline-light" onclick="en();">Login</button>
+                    <button id="submit" type="button" class="btn btn-outline-light" onclick="en();">Login</button>
                 </form>
             </div>
         </div>

@@ -6,11 +6,14 @@
     <body>
         <?php include('navbar.php'); ?>
         <div id="main">
-            <header class="center" style="font-size: 30px; padding-top: 60px;">WSU CS Project - LedGrid</header>
+        <header slide class="center" style="font-size: 30px; padding-top: 60px;">WSU CS Project - LedGrid</header>
             <!-- <input type="text" placeholder="Message" name="Message" id="Message" value="" required> -->
             <div id="content">
             </div>
         </div>
+        <p>
+            
+        </p>
     </body>
 </html>
 <?php include('../php/sessionchecker.php'); ?>

@@ -41,5 +41,5 @@ function resetSession() {
 }
 
 console.log('Starting Timer...');
-setCookie("Session", "Winona", 10);
+setCookie("Session", "Winona", 1);
 setTimeout(resetSession, 300000);
