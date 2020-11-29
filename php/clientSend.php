@@ -27,7 +27,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 ?>
-
 <html lang="en-US">
     <?php include('../HTML/header.php'); include('GetSessionID.php'); ?>
     <script>
