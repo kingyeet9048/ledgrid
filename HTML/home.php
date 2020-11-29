@@ -1,32 +1,18 @@
-<!-- Start of the session. Meant to keep people from staying on the page
-for too long.  -->
-<script src="../javascript/session.js"></script>
 <!DOCTYPE html>
+<script type="text/javascript" src="../javascript/session.js"></script>
 <!-- Information page. -->
 <html lang="en-US">
     <?php include('header.php'); ?>
     <body>
         <?php include('navbar.php'); ?>
         <div id="main">
-            <header class="center" style="font-size: 30px; padding-top: 60px;">WSU CS Project - LedGrid</header>
+        <header slide class="center" style="font-size: 30px; padding-top: 60px;">WSU CS Project - LedGrid</header>
             <!-- <input type="text" placeholder="Message" name="Message" id="Message" value="" required> -->
-            <div class="content">
+            <div id="content">
             </div>
         </div>
+        <p>
+        </p>
     </body>
 </html>
-<!-- Checks the session id. If the Session ID is incorrect, it will
-redirect the user back to the login screen to relogin. -->
-<?php 
-    $session = $_GET['session'];
-    $myfile = fopen("/home/sbada9048/secure_pass", "r") or die("unable to open file!");
-    fgets($myfile);
-    fgets($myfile);
-    $correctSession = trim(fgets($myfile));
-    fclose($myfile);
-    if ($session == $correctSession) {
-    }
-    else {
-        header('Location: ../index.php?failed=2');
-    }
-?>
+<?php include('../php/sessionchecker.php'); ?>

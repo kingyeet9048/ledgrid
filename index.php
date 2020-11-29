@@ -2,6 +2,20 @@
 <html lang="en-US">
     <!-- Include the head -->
     <?php include('HTML/header.php'); ?>
+    <script>
+        $(document).ready(function(){
+            $('#username').keypress(function(e){
+                if(e.keyCode==13)
+                    $('#submit').click();
+            });
+        });
+        $(document).ready(function(){
+            $('#password').keypress(function(e){
+                if(e.keyCode==13)
+                    $('#submit').click();
+            });
+        });
+    </script>
     <body>
         <!-- Entire page -->
         <div class='main'>
@@ -19,7 +33,7 @@
                     <!-- Bootstrapped the css of the button. All I have to do is 
                     Call the class of the style I want to use. Makes for simplier
                     and faster programming. -->
-                    <button type="button" class="btn btn-outline-light" onclick="en();">Login</button>
+                    <button id="submit" type="button" class="btn btn-outline-light" onclick="en();">Login</button>
                 </form>
             </div>
         </div>
@@ -31,8 +45,6 @@
             else if ($_GET['failed'] == 2) {
                 echo '<script>document.getElementById("p1").innerHTML = "Please verify your credentials and login.";</script>';
             }
-            // Echo the username back into the textbox to make it more user friendly.
-            echo "<script>document.getElementById('username').value = '".$_GET['username']."';</script>";
         ?>
     </body>
 </html>

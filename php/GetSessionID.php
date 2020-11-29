@@ -1,11 +1,9 @@
 <?php
 
-    function getSession($page) {
-        $myfile = fopen("/home/sbada9048/secure_pass", "r") or die("unable to open file!");
-
-        fgets($myfile);
-        fgets($myfile);
-        fclose($myfile);
-        return strval($page + "?session=" + trim(strval(  fgets($myfile)  )));
+    include("../php/SessionHandler.php");
+    $data = Session::getInstance();
+    $data->startSession();
+    function getSession() {
+        return strval("?sess=".trim(strval(session_id())));
     }
 ?>
