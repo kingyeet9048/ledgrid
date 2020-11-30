@@ -30,5 +30,4 @@
       echo 'index.php?failed=1';
    }
 
-
 ?>
