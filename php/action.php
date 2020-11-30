@@ -27,7 +27,7 @@
       echo 'HTML/home.php?sess='.$correctSession;
    }
    else {
-      echo 'index.php?failed=1&username='.$user;
+      echo 'index.php?failed=1';
    }
 
 
