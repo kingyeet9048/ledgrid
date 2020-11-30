@@ -45,8 +45,6 @@
             else if ($_GET['failed'] == 2) {
                 echo '<script>document.getElementById("p1").innerHTML = "Please verify your credentials and login.";</script>';
             }
-            // Echo the username back into the textbox to make it more user friendly.
-            //echo "<script>document.getElementById('username').value = '".$_GET['username']."';</script>";
         ?>
     </body>
 </html>
