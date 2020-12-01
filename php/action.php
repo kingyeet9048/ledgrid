@@ -7,7 +7,7 @@
    //gettting the raw data from xmlhttpsrequest
    $rawdata = file_get_contents("php://input");
    $decodedData = json_decode($rawdata);
-   //removing the strings and getting the raw sha256 output
+   //getting the raw sha256 output
    $user = $decodedData->username;
    $pass = $decodedData->password;
    $myfile = fopen("../../secure_pass", "r") or die("unable to open file!");
