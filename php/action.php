@@ -32,5 +32,4 @@
       echo 'index.php?failed=1&username='.$user;
    }
 
-
 ?>
