@@ -46,6 +46,11 @@ table {
 #p1 {
     color: red;
 }
+#p2 {
+    color: rgb(255, 255, 255);
+    padding: 3%;
+}
+
 
 #loginContainer {
     padding: 16px;
@@ -89,9 +94,9 @@ table {
 }
 
 #content {
-    padding-bottom: 2.5rem;
+    
     text-align: center;
-    margin: 10% auto 0 auto;
+    font-size:50;
     color: white;
 }
 
@@ -119,3 +124,19 @@ table {
     animation-iteration-count: 1;
     animation-timing-function: linear;};
    
+
+    #triangle-up {
+        width: 0;
+        height: 0;
+        border-left: 50px solid transparent;
+        border-right: 50px solid transparent;
+        border-bottom: 100px solid red;
+      }
+
+    #triangle-down {
+        width: 0;
+        height: 0;
+        border-left: 50px solid transparent;
+        border-right: 50px solid transparent;
+        border-top: 100px solid rgb(24, 0, 243);
+      }
