@@ -13,22 +13,23 @@
    $code = $decodedData->code;
    $cred = fopen("../../secure_pass", "r") or die("unable to open file!");
    $activationCode = fopen("../../act_code", "r") or die("unable to open file!");
-   $correctCurrent = (fgets($cred));
+   $correctUser = (fgets($cred));
+   $correctCurrent = fgets($cred);
    $correctCode = fgets($activationCode);
-   $correctUser = trim(strval(  $correctUser ));
-   $correctCode  =trim(strval( $correctCode ));
+   $correctCurrent = trim(strval(  $correctCurrent ));
+   $correctCode  = trim(strval( $correctCode ));
    $correctSession = session_id();
    fclose($cred);
    fclose($activationCode);
    //comparing the provided pass and code with the one on the system.
    if(!($current == $correctCurrent && $code == $correctCode)) {
-        echo 'index.php?failed=3';
+        echo '../index.php?failed=3';
     }
     else {
         $cred = fopen("../../secure_pass", "w");
-        fwrite($cred, $correctUser."\n");
+        fwrite($cred, $correctUser);
         fwrite($cred, $new);
         fclose($cred);
-        echo 'HTML/home.php?sess='.$correctSession;
+        echo '../HTML/home.php?sess='.$correctSession;
     }
 ?>

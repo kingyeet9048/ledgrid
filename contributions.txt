@@ -1,0 +1,32 @@
+       Chapter 1.0
+Sam Allen's Front end shenanigans
+
+Now my contributions to this project were front end
+I did a majority of the CSS and got the pages to animate so that the text sildes in smoothly from the side 
+I also desgined the way the task bar looks including the shapes behind the text and how the text glows and changes color when the mouse hovers over it 
+and also layouts  for the login page(index), send message, and reset password screen making sure the theme of each page I worked on stayed consistant with the schools colors,
+as well as the fonts colors and font styles examples include the glow/shadow on the text. 
+I aidded in the creation of the reset password function by helping moddify code from the login page (resetpassword.php, ResetPass.js) 
+
+    Chapter 1.1
+Sulaiman Bada's Back End/Session
+
+I contributed to the back end portion of the project.
+* Facecandy
+* header
+* navbar
+* SendMessage
+* EncryptionManager
+* ResetPass
+* session
+* Everything inside "php"
+
+    Chapter 1.2
+Munira Hassan Interior Homepage/Add Pages
+
+My contribution to this project were to add pages and make the homepage pretty where the auidence get drawing into. I hade an idea to record our fadecandy led 
+lights saying our name and convert it to a gif. I added the gif video to the homepage where the audience can get a visual what our project is. I wanted our audience 
+to get drawing into the gif and make it easy to have a visual about what our project is becasue some people might not know what fadecandy is.I added a background 
+page, describing what fadecandy is. Also added a new page "how it works", talking about how does fadecandy works and what software we used for the coding style.
+I made the text look neat and easy to read for the auidence. 
+
