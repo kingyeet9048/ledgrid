@@ -28,18 +28,21 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 ?>
 <html lang="en-US">
+    <div>
     <?php include('../HTML/header.php'); include('GetSessionID.php'); ?>
     <script>
         function pageRedirect() {
             window.location.href ="<?php echo "../HTML/SendMessage.php".getSession();?>";
         }      
     </script>
+   
     <body id="main">
-        <div id="content">
+        <div id="content" style="margin: 3rem">
             <div class='alert alert-warning alert-dismissible fade show' role="alert">
                 <p><?php echo $result; ?></p>
             </div>
-            <button type="button" class="btn btn-outline-light" onclick="pageRedirect();">Send Another Message?</button>
+            <button type="button" class="btn btn-outline-light"  onclick="pageRedirect();">Send Another Message?</button>
         </div>
+    </div>
     </body>
 </html>

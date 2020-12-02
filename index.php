@@ -38,12 +38,11 @@
                     Call the class of the style I want to use. Makes for simplier
                     and faster programming. -->
 
-                    <button id="submit" type="button" class="btn btn-outline-light" onclick="en();">Login</button>
+                    <button id="submit" type="button" class="btn btn-outline-light" style="padding: 0px " onclick="en();">Login</button>
                 
                 </form>
-                <p style="color: white;"> 
-                Forgot password? Too bad.
-                </p>
+                <br>
+                <a href="php/ResetPassword.php" style="color:white">Reset Password</a>
                
 
             </div>

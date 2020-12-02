@@ -48,16 +48,6 @@ table {
 }
 #p2 {
     color: rgb(255, 255, 255);
-    padding: 3%;
-}
-
-
-#loginContainer {
-    padding: 16px;
-    text-align: center;
-    /* position: fixed; */
-    top: 50%;
-    margin: 10% auto 0 auto;
 }
 
 #nav {
@@ -96,7 +86,7 @@ table {
 #content {
     
     text-align: center;
-    font-size:50;
+    font-size:25px;
     color: white;
 }
 
@@ -110,33 +100,26 @@ table {
 }
 /* The animation code */
 @keyframes slide {
-    0%   {right:7000px; }
-    25%   {right:300x; }
+    0%   { right:7000px; }
+    25%  { right:300x; }
     50%  { right:200px; }
-    75%  {right:100px;}
-    100%  {right:0px; }
-  }
-  div {
+    75%  { right:100px;}
+    100% { right:0px; }
+}
+.slider {
     width: 200x;
     height: 25px;
-    animation-name: slide;
-    animation-duration: 2.3s;
-    animation-iteration-count: 1;
-    animation-timing-function: linear;};
-   
-
-    #triangle-up {
-        width: 0;
-        height: 0;
-        border-left: 50px solid transparent;
-        border-right: 50px solid transparent;
-        border-bottom: 100px solid red;
-      }
-
-    #triangle-down {
-        width: 0;
-        height: 0;
-        border-left: 50px solid transparent;
-        border-right: 50px solid transparent;
-        border-top: 100px solid rgb(24, 0, 243);
-      }
+    animation-name: slide; 
+    animation-duration: 2.3s; 
+    animation-iteration-count: 1; 
+    animation-timing-function: linear;
+}
+    
+.blue {
+    border: 1px solid black;
+    margin-top: 80px;
+    margin-bottom: 100px;
+    margin-right: 150px;
+    margin-left: 80px;
+    background-color: rgb(173, 182, 230);
+}
