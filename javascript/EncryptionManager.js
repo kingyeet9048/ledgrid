@@ -1,7 +1,7 @@
 function en() {
     var encryptedUser = CryptoJS.SHA256(document.getElementById('username').value.toString(CryptoJS.enc.Base64));
     var encryptedPass = CryptoJS.SHA256(document.getElementById('password').value.toString(CryptoJS.enc.Base64));
-    //alert("user " + encryptedUser + "pass " + encryptedPass);
+    //alert("pass " + encryptedPass);
     var xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
