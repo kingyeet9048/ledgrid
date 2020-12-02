@@ -17,7 +17,6 @@
         });
     </script>
     <body>
-      
         <!-- Entire page -->
         <div class='main'>
             
@@ -37,14 +36,10 @@
                     <!-- Bootstrapped the css of the button. All I have to do is 
                     Call the class of the style I want to use. Makes for simplier
                     and faster programming. -->
-
-                    <button id="submit" type="button" class="btn btn-outline-light" style="padding: 0px " onclick="en();">Login</button>
-                
+                    <button id="submit" type="button" class="btn btn-outline-light" style="padding: 0px " onclick="en();">Login</button>  
                 </form>
                 <br>
                 <a href="php/ResetPassword.php" style="color:white">Reset Password</a>
-               
-
             </div>
         </div>
         <!-- Variables will be by the url for failed login or timeout.  -->

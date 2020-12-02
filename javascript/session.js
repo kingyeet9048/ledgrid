@@ -25,15 +25,6 @@ function resetSession() {
     var session = getCookie('Session');
     if(session != "") {
         setTimeout(window.location.href = "../index.php", 300000);
-        // if(confirm("You have been inactive. Wish to continue?")) {
-        //     setTimeout(resetSession, 600000);
-        //     session = getCookie('N?A');
-        //     close();
-        // }
-        // else {
-        //     document.cookie = "Session=Winona; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-        //     window.location.href = "../index.php";
-        // }
     }
     else {
         close();

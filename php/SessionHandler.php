@@ -1,8 +1,8 @@
-
 <?php
 
 /*
     Use the static method getInstance to get the object.
+    Code from offical php site.
 */
 
 class Session

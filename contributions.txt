@@ -26,7 +26,7 @@ Munira Hassan Interior Homepage/Add Pages
 
 My contribution to this project were to add pages and make the homepage pretty where the auidence get drawing into. I hade an idea to record our fadecandy led 
 lights saying our name and convert it to a gif. I added the gif video to the homepage where the audience can get a visual what our project is. I wanted our audience 
-to get drawing into the gif and make it easy to have a visual about what our project is becasue some people might not know what fadecandy is.I added a background 
+to get drawing into the gif and make it easy to have a visual about what our project is becasue some people might not know what fadecandy is. I added a background 
 page, describing what fadecandy is. Also added a new page "how it works", talking about how does fadecandy works and what software we used for the coding style.
 I made the text look neat and easy to read for the auidence. 
 

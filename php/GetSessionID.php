@@ -1,5 +1,5 @@
 <?php
-
+    //Returns the current session id in a url format. 
     include("../php/SessionHandler.php");
     $data = Session::getInstance();
     $data->startSession();

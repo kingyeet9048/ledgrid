@@ -5,11 +5,7 @@ redirect the user back to the login screen to relogin. -->
     $data = Session::getInstance();
     $data->startSession();
     $correctSession = session_id();
-    if ($session == $correctSession) {
-        //echo "<script>alert('works');</script>";
-    }
-    else {
-        //echo "<script>alert('noworks');</script>";
+    if (!($session == $correctSession)) {
         header('Location: ../index.php?failed=2');
     }
 ?>

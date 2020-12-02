@@ -13,7 +13,6 @@
    $myfile = fopen("../../secure_pass", "r") or die("unable to open file!");
    $correctUser = (fgets($myfile));
    $correctPass = (fgets($myfile));
-   // $correctSession = fgets($myfile);
    $correctSession = session_id();
    $correctUser = trim(strval(  $correctUser ));
    $correctPass = trim(strval(  $correctPass ));
