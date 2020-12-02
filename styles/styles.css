@@ -50,6 +50,13 @@ table {
     color: rgb(255, 255, 255);
 }
 
+#loginContainer {
+    padding: 16px;
+    text-align: center;
+    top: 50%;
+    margin: 10% auto 0 auto;
+}
+
 #nav {
     margin: auto;
     margin: bottom 25px;

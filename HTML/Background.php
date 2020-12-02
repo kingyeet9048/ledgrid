@@ -5,7 +5,7 @@
     <?php include('header.php'); ?>
     <body>
         <?php include('navbar.php'); ?>
-        <div id="main">
+        <div id="main" class="slider">
         <header slide class="center" style="font-size: 30px; padding-top: 60px;">WSU CS Project - Background</header>
             <!-- <input type="text" placeholder="Message" name="Message" id="Message" value="" required> -->
             <div id="content">
