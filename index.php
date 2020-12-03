@@ -2,21 +2,21 @@
 <html lang="en-US">
     <!-- Include the head -->
     <?php include('HTML/header.php'); ?>
-    <script>
-        $(document).ready(function(){
-            $('#username').keypress(function(e){
-                if(e.keyCode==13)
-                    $('#submit').click();
-            });
-        });
-        $(document).ready(function(){
-            $('#password').keypress(function(e){
-                if(e.keyCode==13)
-                    $('#submit').click();
-            });
-        });
-    </script>
     <body>
+        <script>
+            $(document).ready(function(){
+                $('#username').keypress(function(e){
+                    if(e.keyCode==13)
+                        $('#submit').click();
+                });
+            });
+            $(document).ready(function(){
+                $('#password').keypress(function(e){
+                    if(e.keyCode==13)
+                        $('#submit').click();
+                });
+            });
+        </script>
         <!-- Entire page -->
         <div class='main'>
             

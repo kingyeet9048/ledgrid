@@ -8,6 +8,6 @@
         <li><a href="../index.php">LOGOUT</a></li>
         <!-- Start of the session. Meant to keep people from staying on the page
         for too long.  -->
-        <link type="text/javascript" href="../javascript/session.js">
+        <script src="../javascript/session.js"></script>
     </ul>
 </div>
