@@ -2,27 +2,27 @@
 <!-- Information page. -->
 <html lang="en-US">
     <?php include('../HTML/header.php'); ?>
-    <script>
-        $(document).ready(function(){
-            $('#CP').keypress(function(e){
-                if(e.keyCode==13)
-                    $('#submit').click();
-            });
-        });
-        $(document).ready(function(){
-            $('#NP').keypress(function(e){
-                if(e.keyCode==13)
-                    $('#submit').click();
-            });
-        });
-        $(document).ready(function(){
-            $('#AC').keypress(function(e){
-                if(e.keyCode==13)
-                    $('#submit').click();
-            });
-        });
-    </script>
     <body>
+        <script>
+            $(document).ready(function(){
+                $('#CP').keypress(function(e){
+                    if(e.keyCode==13)
+                        $('#submit').click();
+                });
+            });
+            $(document).ready(function(){
+                $('#NP').keypress(function(e){
+                    if(e.keyCode==13)
+                        $('#submit').click();
+                });
+            });
+            $(document).ready(function(){
+                $('#AC').keypress(function(e){
+                    if(e.keyCode==13)
+                        $('#submit').click();
+                });
+            });
+        </script>
         <div id="main"> 
         <header class="center" style="font-size: 30px; padding-top: 60px;">Password Reset</header>
         <div style="text-align: center; width: 100%; display: flex; justify-content: space-evenly;">    
@@ -31,7 +31,7 @@
                     <table >
                         <tr>
                             <td>
-                                <label for="panel01" style=" text-shadow: 0px 0px 1px rgb(255,255,255);">Current Password</label>
+                                <label style=" text-shadow: 0px 0px 1px rgb(255,255,255);">Current Password</label>
                             </td>
                             <td>
                                 <input type="password" placeholder="Current password" name="CP" id="CP" value="">
@@ -40,7 +40,7 @@
                         </tr>
                         <tr>
                             <td>
-                                <label for="panel02" style=" text-shadow: 0px 0px 1px rgb(255,255,255);">New Password</label>
+                                <label style=" text-shadow: 0px 0px 1px rgb(255,255,255);">New Password</label>
                             </td>
                             <td>
                                 <input type="password" placeholder="New Password" name="NP" id="NP">
@@ -49,7 +49,7 @@
                         </tr>
                         <tr>
                             <td>
-                                <label for="panel03" style=" text-shadow: 0px 0px 1px rgb(255,255,255);">Activation Code</label>
+                                <label style=" text-shadow: 0px 0px 1px rgb(255,255,255);">Activation Code</label>
                             </td>
                             <td>
                                 <input type="password" placeholder="Activation Code" name="AC" id="AC">

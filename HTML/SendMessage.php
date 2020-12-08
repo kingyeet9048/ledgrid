@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<script type="text/javascript" src="../javascript/session.js"></script>
 <html lang="en-US">
     <?php include('header.php'); ?>
     <body>

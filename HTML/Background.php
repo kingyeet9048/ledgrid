@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<script type="text/javascript" src="../javascript/session.js"></script>
 <!-- Information page. -->
 <html lang="en-US">
     <?php include('header.php'); ?>
     <body>
         <?php include('navbar.php'); ?>
         <div id="main" class="slider">
-        <header slide class="center" style="font-size: 30px; padding-top: 60px;">WSU CS Project - Background</header>
+        <header class="center" style="font-size: 30px; padding-top: 60px;">WSU CS Project - Background</header>
             <div id="content">
                 <p class="blue">  FadeCandy is tool that creates interactive light art using LED lighting. It runs many programming
                  languages such as python, processing java, and javascript. The fadecandy controller hardware has 
