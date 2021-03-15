@@ -13,3 +13,4 @@
     </body>
 </html>
 <?php include('../php/sessionchecker.php'); ?>
+<!-- Hello WORLD -->
