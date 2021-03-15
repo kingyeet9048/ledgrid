@@ -19,5 +19,3 @@ reuse the head as many times as I want. Makes for more efficient code. -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9/core.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9/sha256.js"></script>    
 </head>
-
-<!-- What's good? -->
