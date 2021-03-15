@@ -10,7 +10,7 @@
    //getting the raw sha256 output
    $user = $decodedData->username;
    $pass = $decodedData->password;
-   $myfile = fopen("../../secure_pass", "r") or die("unable to open file!");
+   $myfile = fopen("../secure_pass", "r") or die("unable to open file!");
    $correctUser = (fgets($myfile));
    $correctPass = (fgets($myfile));
    $correctSession = session_id();
