@@ -3,6 +3,7 @@
     <?php include('header.php'); ?>
     <body>
         <?php include('navbar.php'); ?>
+        <?php include('../php/sessionchecker.php'); ?>
         <div id="main" class="slider">
             <header class="center" style="font-size: 30px; padding-top: 60px;">WSU CS Project - Send Message</header>
             <div style="text-align: center; width: 100%; display: flex; justify-content: space-evenly;">
@@ -51,4 +52,3 @@
         </div>
     </body>
 </html>
-<?php include('../php/sessionchecker.php'); ?>

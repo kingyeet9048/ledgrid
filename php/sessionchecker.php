@@ -1,6 +1,9 @@
 <!-- Checks the session id. If the Session ID is incorrect, it will
 redirect the user back to the login screen to relogin. -->
 <?php 
+    //displaying errors
+    ini_set ('display_errors',1);
+    error_reporting (E_ALL & ~ E_NOTICE);
     if(isset($_GET['sess'])) {
         $session = $_GET['sess'];
         $data = Session::getInstance();
