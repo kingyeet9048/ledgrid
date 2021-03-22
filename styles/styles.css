@@ -87,7 +87,8 @@ table {
     margin-left: 0%;
     margin-right: 0%;
     position: relative;
-    min-height: 100vh;
+    min-height: 200vh;
+    min-width: 400vh;
 }
 
 #content {
