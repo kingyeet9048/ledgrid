@@ -44,14 +44,16 @@
         </div>
         <!-- Variables will be by the url for failed login or timeout.  -->
         <?php 
-            if($_GET['failed'] == 1) {
-                echo '<script>document.getElementById("p1").innerHTML = "Username or password is incorrect. Please try again.";</script>';
-            }
-            else if ($_GET['failed'] == 2) {
-                echo '<script>document.getElementById("p1").innerHTML = "Please verify your credentials and login.";</script>';
-            }
-            else if ($_GET['failed'] == 3){
-                echo '<script>document.getElementById("p1").innerHTML = "Password change failed. ";</script>';
+            if(isset($_GET['failed'])) {
+                if($_GET['failed'] == 1) {
+                    echo '<script>document.getElementById("p1").innerHTML = "Username or password is incorrect. Please try again.";</script>';
+                }
+                else if ($_GET['failed'] == 2) {
+                    echo '<script>document.getElementById("p1").innerHTML = "Please verify your credentials and login.";</script>';
+                }
+                else if ($_GET['failed'] == 3){
+                    echo '<script>document.getElementById("p1").innerHTML = "Password change failed. ";</script>';
+                }
             }
         ?>
     </body>
