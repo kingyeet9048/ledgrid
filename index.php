@@ -39,8 +39,8 @@
                     <button id="submit" type="button" class="btn btn-outline-light" style="padding: 0px " onclick="en();">Login</button>  
                 </form>
                 <br>
-                <p style="color: white;" id="signup">Don't have an account? <a href="signup.html">Sign up Now!</a></p>
-                <a href="php/ResetPassword.php" >Reset Password</a>
+                <p style="color: white;" id="signup">Don't have an account? <a href="php/signup.php">Sign up Now!</a></p>
+                <a href="php/ResetPassword.php">Reset Password</a>
             </div>
         </div>
         <!-- Variables will be by the url for failed login or timeout.  -->

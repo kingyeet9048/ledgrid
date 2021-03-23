@@ -1,44 +1,37 @@
-<?php
-    //displaying errors
-   ini_set ('display_errors',1);
-   error_reporting (E_ALL & ~ E_NOTICE);
-   include("SessionHandler.php");
-   $data = Session::getInstance();
-   //gettting the raw data from xmlhttpsrequest
-   $rawdata = file_get_contents("php://input");
-   $decodedData = json_decode($rawdata);
-   //getting the raw sha256 output
-   $current = $decodedData->currentPassword;
-   $new = $decodedData->newPassword;
-   $code = $decodedData->code;
-   $cred = fopen("../../secure_pass", "r") or die("unable to open file!");
-   $activationCode = fopen("../../act_code", "r") or die("unable to open file!");
-   $correctUser = (fgets($cred));
-   $correctCurrent = fgets($cred);
-   $correctCode = fgets($activationCode);
-   $correctCurrent = trim(strval(  $correctCurrent ));
-   $correctCode  = trim(strval( $correctCode ));
-   $correctSession = session_id();
-   fclose($cred);
-   fclose($activationCode);
-   //comparing the provided pass and code with the one on the system.
-   if(!($current == $correctCurrent && $code == $correctCode)) {
-        if (isset($_SERVER['HTTP_COOKIE'])) {
-            $cookies = explode(';', $_SERVER['HTTP_COOKIE']);
-            foreach($cookies as $cookie) {
-                $parts = explode('=', $cookie);
-                $name = trim($parts[0]);
-                setcookie($name, '', time()-1000);
-                setcookie($name, '', time()-1000, '/');
-            }
-        }  
-        echo '../index.php?failed=3';
-    }
-    else {
-        $cred = fopen("../../secure_pass", "w");
-        fwrite($cred, $correctUser);
-        fwrite($cred, $new);
-        fclose($cred);
-        echo '../HTML/home.php?sess='.$correctSession;
-    }
-?>
+<!DOCTYPE html>
+<!-- Information page. -->
+<html lang="en-US">
+    <?php include('../HTML/header.php'); ?>
+    <body>
+        <div id="main"> 
+            <header class="center mb-4" style="font-size: 30px; padding-top: 60px;">Sign Up</header>
+            <div style="text-align: center; width: 100%; display: flex; justify-content: space-evenly;">    
+                <div id="content">  
+                    <form>
+                        <div id="inputs">
+                            <input type="text" id="materialRegisterFormFirstName" class="form-control mb-4" placeholder="First Name" required>
+
+                            <input type="text" id="materialRegisterFormLastName" class="form-control mb-4" placeholder="Last Name" required>
+
+                            <input type="email" id="materialRegisterFormEmail" class="form-control mb-4" placeholder="Email" required>
+
+                            <input type="text" id="materialRegisterFormUsername" class="form-control mb-4" placeholder="Username" required>
+
+                            <input type="password" id="materialRegisterFormPassword" class="form-control mb-4" aria-describedby="materialRegisterFormPasswordHelpBlock" placeholder="Password" required>
+                        </div>
+                        <div id="newInput">
+                            
+                        </div>
+                        <select class="browser-default custom-select" id="select" onchange="checkOptions();">
+                            <option value="Admin" selected="">Admin</option>
+                            <option value="Faculty">Faculty</option>
+                            <option value="Student">Student</option>
+                        </select>
+
+                        <button class="btn btn-info my-4 btn-outline-light" type="submit">Sign up</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
