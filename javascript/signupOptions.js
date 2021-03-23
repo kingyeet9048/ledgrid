@@ -21,24 +21,8 @@ function checkOptions() {
         input.required = true;
         container.appendChild(input);
 
-        var input = document.createElement("input");
-        input.type = "text";
-        input.name = "starid";
-        input.id = "starid";
-        input.className = "form-control mb-4";
-        input.placeholder = "StarID";
-        input.required = true;
-        container.appendChild(input);
     }
     if (curName == "Student") {
-        var input = document.createElement("input");
-        input.type = "text";
-        input.name = "starid";
-        input.id = "starid";
-        input.className = "form-control mb-4";
-        input.placeholder = "StarID";
-        input.required = true;
-        container.appendChild(input);
 
         var selectList = document.createElement("select");
         selectList.id = "SelectID";
