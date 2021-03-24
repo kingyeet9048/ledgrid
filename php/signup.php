@@ -2,6 +2,11 @@
 <!-- Information page. -->
 <html lang="en-US">
     <?php include('../HTML/header.php'); ?>
+    <script type="text/javascript">
+        function goBack() {
+            window.location.href = "../";
+        }
+    </script>
     <body>
         <div id="main"> 
             <header class="center mb-4" style="font-size: 50px; padding-top: 60px;">Sign Up</header>
@@ -28,7 +33,8 @@
                             <option value="Student">Student</option>
                         </select>
 
-                        <button class="btn btn-info my-4 btn-outline-light" type="button">Sign up</button>
+                        <button class="btn btn-info mt-4 btn-outline-light" type="button" onclick="goBack();">Go Back</button>
+                        <button class="btn btn-info mt-4 btn-outline-light" type="button">Sign up</button>
                     </form>
                 </div>
             </div>
