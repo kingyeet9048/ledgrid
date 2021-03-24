@@ -15,7 +15,7 @@ function checkOptions() {
         var input = document.createElement("input");
         input.type = "text";
         input.name = "department";
-        input.id = "department";
+        input.id = "Department";
         input.className = "form-control mb-4";
         input.placeholder = "Department";
         input.required = true;

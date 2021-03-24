@@ -14,17 +14,17 @@
                 <div id="content">
                     <form>
                         <div id="inputs">
-                            <input type="text" id="materialRegisterFormFirstName" class="form-control mb-4" placeholder="First Name" required>
+                            <input type="text" id="FirstName" class="form-control mb-4" placeholder="First Name" required>
 
-                            <input type="text" id="materialRegisterFormLastName" class="form-control mb-4" placeholder="Last Name" required>
+                            <input type="text" id="LastName" class="form-control mb-4" placeholder="Last Name" required>
 
-                            <input type="email" id="materialRegisterFormEmail" class="form-control mb-4" placeholder="Email" required>
+                            <input type="email" id="Email" class="form-control mb-4" placeholder="Email" required>
 
-                            <input type="text" id="materialRegisterFormUsername" class="form-control mb-4" placeholder="Username" required>
+                            <input type="text" id="Username" class="form-control mb-4" placeholder="Username" required>
 
-                            <input type="password" id="materialRegisterFormPassword" class="form-control mb-4" aria-describedby="materialRegisterFormPasswordHelpBlock" placeholder="Password" required>
+                            <input type="password" id="Password" class="form-control mb-4" aria-describedby="materialRegisterFormPasswordHelpBlock" placeholder="Password" required>
 
-                            <input type="password" id="materialRegisterFormActCode" class="form-control mb-4" placeholder="Activation Code" required>
+                            <input type="password" id="ActCode" class="form-control mb-4" placeholder="Activation Code" required>
                         </div>
                         <div id="newInput"></div>
                         <select class="form-control mb-4" id="select" onchange="checkOptions();">
@@ -34,7 +34,7 @@
                         </select>
 
                         <button class="btn btn-info mt-4 btn-outline-light" type="button" onclick="goBack();">Go Back</button>
-                        <button class="btn btn-info mt-4 btn-outline-light" type="button">Sign up</button>
+                        <button class="btn btn-info mt-4 btn-outline-light" type="button" onclick="pushSignUp();">Sign up</button>
                     </form>
                 </div>
             </div>
