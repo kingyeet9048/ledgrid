@@ -22,6 +22,9 @@
                         $('#submit').click();
                 });
             });
+            function goBack() {
+                window.location.href = "../";
+            }
         </script>
         <div id="main"> 
         <header class="center" style="font-size: 30px; padding-top: 60px;">Password Reset</header>
@@ -58,7 +61,8 @@
                         </tr>
                     </table>
                 </form>
-                <button id="submit" type="button" class="btn btn-outline-light" style="padding: 3px " onclick="reset();">Reset</button>
+                <button class="btn btn-info mt-4 btn-outline-light" type="button" onclick="goBack();">Go Back</button>
+                <button id="submit" type="button" class="btn btn-info mt-4 btn-outline-light" onclick="reset();">Reset</button>
             </div>
         </div>
         </div>
