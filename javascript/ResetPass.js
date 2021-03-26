@@ -8,7 +8,7 @@ function reset() {
             window.location.href = this.responseText.toString();
         }
       };
-    xhr.open("POST", 'signup.php', true);
+    xhr.open("POST", 'processreset.php', true);
     xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
     xhr.send(JSON.stringify({
         'currentPassword': CurrentPass.toString(CryptoJS.enc.Base64),
