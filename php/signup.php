@@ -26,13 +26,12 @@
 
                             <input type="password" id="ActCode" class="form-control mb-4" placeholder="Activation Code" required>
                         </div>
-                        <div id="newInput"></div>
                         <select class="form-control mb-4" id="select" onchange="checkOptions();">
                             <option value="Admin" selected="">Admin</option>
                             <option value="Faculty">Faculty</option>
                             <option value="Student">Student</option>
                         </select>
-
+                        <div id="newInput"></div>
                         <button class="btn btn-info mt-4 btn-outline-light" type="button" onclick="goBack();">Go Back</button>
                         <button class="btn btn-info mt-4 btn-outline-light" type="button" onclick="pushSignUp();">Sign up</button>
                     </form>
