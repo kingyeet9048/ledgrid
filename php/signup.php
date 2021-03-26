@@ -19,15 +19,12 @@
 
                             <input type="password" id="materialRegisterFormPassword" class="form-control mb-4" aria-describedby="materialRegisterFormPasswordHelpBlock" placeholder="Password" required>
                         </div>
-                        <div id="newInput">
-
-                        </div>
                         <select class="form-control mb-4" id="select" onchange="checkOptions();">
                             <option value="Admin" selected="">Admin</option>
                             <option value="Faculty">Faculty</option>
                             <option value="Student">Student</option>
                         </select>
-
+                        <div id="newInput"></div>
                         <button class="btn btn-info my-4 btn-outline-light" type="submit">Sign up</button>
                     </form>
                 </div>
