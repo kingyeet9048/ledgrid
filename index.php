@@ -36,7 +36,7 @@
                     <!-- Bootstrapped the css of the button. All I have to do is 
                     Call the class of the style I want to use. Makes for simplier
                     and faster programming. -->
-                    <button id="submit" type="button" class="btn btn-outline-light" style="padding: 0px " onclick="en();">Login</button>  
+                    <button id="submit" type="button" class="btn btn-info mt-4 btn-outline-light" onclick="en();">Login</button>  
                 </form>
                 <br>
                 <p style="color: white;" id="signup">Don't have an account? <a href="php/signup.php">Sign up Now!</a></p>
