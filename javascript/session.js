@@ -22,7 +22,7 @@ function getCookie(cname) {
 }
 
 function resetSession() {
-    var session = getCookie('Session');
+    var session = getCookie('PHPSESSID');
     if(session != "") {
         setTimeout(window.location.href = "../index.php", 300000);
     }
@@ -31,6 +31,9 @@ function resetSession() {
     }
 }
 
+function eraseCookie(name) {
+  setCookie(name,"",-1);
+}
+
 console.log('Starting Timer...');
-setCookie("Session", "Winona", 1);
 setTimeout(resetSession, 300000);
