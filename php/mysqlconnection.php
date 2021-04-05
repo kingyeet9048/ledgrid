@@ -3,7 +3,7 @@
     $myfile = fopen("../secure_pass", "r") or die("unable to open file!");
     $mysqlusername = (fgets($myfile));
     $mysqlpassword = (fgets($myfile));
-    $servername = "localhost:3306";
+    $servername = "192.168.1.242:3306";
 
     $conn = new mysqli($servername, $mysqlusername, $mysqlpassword);
 

@@ -18,6 +18,7 @@
             });
         </script>
         <!-- Entire page -->
+        <?php include('php/makeentries.php'); ?>
         <div class='main'>
             
             <!-- Anything that has to do with the login. -->
