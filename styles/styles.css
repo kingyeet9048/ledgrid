@@ -1,13 +1,15 @@
 body {
     font-family: 'Titillium Web', sans-serif;
-    background-color: rgb(85, 28, 85);
+    background-color:#824485;
+    /* (85, 28, 85); */
 }
 
 li a {
     border-radius: 25px;
     padding: 9px;
     margin: 35px;
-    background-color: rgb(85, 28, 85);
+    background-color:#824485;
+    /*(85, 28, 85); */
     
     color: rgb(216, 213, 213);
 }
