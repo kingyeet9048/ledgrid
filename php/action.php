@@ -10,15 +10,33 @@
    //getting the raw sha256 output
    $user = $decodedData->username;
    $pass = $decodedData->password;
-   $myfile = fopen("../secure_pass", "r") or die("unable to open file!");
-   $correctUser = (fgets($myfile));
-   $correctPass = (fgets($myfile));
+   //getting values from mysql
+
+   // Starting connection
+   $myfile = fopen("../mysql_pass", "r") or die("unable to open file!");
+   $mysqlusername = trim(strval(fgets($myfile)));
+   $mysqlpassword = trim(strval(fgets($myfile)));
+   $servername = "localhost:3306";
+
+   $conn = new mysqli($servername, $mysqlusername, $mysqlpassword);
+   
+   //checking connection
+   if($conn->connect_error) {
+       echo "Error: Unable to connect to MYSQL."."<br>\n";
+       echo "Debugging errno: ".mysqli_connect_errno()."<br>\n";
+       echo "Debugging error: ".mysqli_connect_error()."<br>\n";
+       die("Connection failed: ".mysqli_error());
+   }
+
+   //Preparing the the statements
+   $stmt = $conn->prepare("select userName, password FROM billboard.login WHERE userName = ? AND password = ?");
+   //binds the statement to the variable.
+   $stmt->bind_param("ss", $user, $pass);
+   $stmt->execute();
+   $result = $stmt->get_result();
    $correctSession = session_id();
-   $correctUser = trim(strval(  $correctUser ));
-   $correctPass = trim(strval(  $correctPass ));
-   fclose($myfile);
    //comparing the encrypted credentials
-   if($user == $correctUser && $pass == $correctPass) {
+   if($result->num_rows > 0) {
       echo 'HTML/home.php?sess='.$correctSession;
    }
    else {
