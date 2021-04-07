@@ -56,6 +56,9 @@
                 else if ($_GET['failed'] == 3){
                     echo '<script>document.getElementById("p1").innerHTML = "Password change failed. ";</script>';
                 }
+                else if ($_GET['failed'] == 4){
+                    echo '<script>document.getElementById("p1").innerHTML = "Please use a different email. This already exists.";</script>';
+                }
             }
             if (isset($_SERVER['HTTP_COOKIE'])) {
                 $cookies = explode(';', $_SERVER['HTTP_COOKIE']);
