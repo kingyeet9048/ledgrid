@@ -1,36 +1,31 @@
 <?php
 
+$myfile = fopen("../mysql_pass", "r") or die("unable to open file!");
+$mysqlusername = trim(strval(fgets($myfile)));
+$mysqlpassword = trim(strval(fgets($myfile)));
+$servername = "localhost:3306";
+
+$conn = new mysqli($servername, $mysqlusername, $mysqlpassword);
+
+//checking connection
+if($conn->connect_error) {
+    echo "Error: Unable to connect to MYSQL."."<br>\n";
+    echo "Debugging errno: ".mysqli_connect_errno()."<br>\n";
+    echo "Debugging error: ".mysqli_connect_error()."<br>\n";
+    die("Connection failed: ".mysqli_error());
+}
+
 if($_SERVER["REQUEST_METHOD"] == "POST") {
     //If input is null return empty space.
     $panel01 = $_POST['panel01'] != '' ? $_POST['panel01'] : ' ';
     $panel02 = $_POST['panel02'] != '' ? $_POST['panel02'] : ' ';
     $panel03 = $_POST['panel03'] != '' ? $_POST['panel03'] : ' ';
 
-
-    $host = "199.17.162.75"; 
-    $port = 4444;
-    $data = strval( $panel01."&".$panel02."&".$panel03 );
-    $result = "";
-
-    //Try to make a socket.
-    if ( ($socket = socket_create(AF_INET, SOCK_STREAM, SOL_TCP)) === FALSE ) {
-        //if false, get the error that is returned. 
-        $result = socket_strerror(socket_last_error());
-    }
-    else 
-    {
-        //Connect to the socket
-        if ( ($result = socket_connect($socket, $host, $port)) === FALSE ) {
-            //if you cannot connect, get the error from it. 
-            $result = "Attempted to connect to '$host' on port '$port' and get an error of: ".socket_strerror(socket_last_error($socket));
-        }
-        else {
-            //else write to the socket.
-            socket_write($socket, $data."\r\n", strlen($data."\r\n"));
-            $result = "Attempted to connect to '$host' on port '$port'. It was sucessfull. Message sent!";
-        }
-        socket_close($socket);      
-    }
+    $star_id = "VNi0hO6D";#$_GET["starID"];
+    $stmt = $conn->prepare("CALL billboard.insertUserMessages(?,?,?,?)");
+   
+    $stmt->bind_param("ssss", $panel01, $panel02, $panel03, $star_id);
+    $stmt->execute();
 }
 ?>
 
