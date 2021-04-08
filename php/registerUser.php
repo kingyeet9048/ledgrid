@@ -70,6 +70,8 @@
             include("SessionHandler.php");
             $data = Session::getInstance(); 
             $correctSession = session_id();
+
+            setcookie("star_id", $starID, time() + (86400 * 30), "/");
             echo '../HTML/home.php?sess='.$correctSession;
         }
         else {

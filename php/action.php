@@ -29,7 +29,7 @@
    }
 
    //Preparing the the statements
-   $stmt = $conn->prepare("select userName, password FROM billboard.login WHERE userName = ? AND password = ?");
+   $stmt = $conn->prepare("select starID FROM billboard.login WHERE userName = ? AND password = ?");
    //binds the statement to the variable.
    $stmt->bind_param("ss", $user, $pass);
    $stmt->execute();
@@ -37,6 +37,10 @@
    $correctSession = session_id();
    //comparing the encrypted credentials
    if($result->num_rows > 0) {
+      mysqli_data_seek($result, 0);
+      $row = mysqli_fetch_array($result);
+      $starID = $row[0];
+      setcookie("star_id", $starID, time() + (86400 * 30), "/");
       echo 'HTML/home.php?sess='.$correctSession;
    }
    else {
