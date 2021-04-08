@@ -1,5 +1,6 @@
 <?php
 
+//creating connection to MySQL
 $myfile = fopen("../mysql_pass", "r") or die("unable to open file!");
 $mysqlusername = trim(strval(fgets($myfile)));
 $mysqlpassword = trim(strval(fgets($myfile)));
@@ -21,7 +22,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     $panel02 = $_POST['panel02'] != '' ? $_POST['panel02'] : ' ';
     $panel03 = $_POST['panel03'] != '' ? $_POST['panel03'] : ' ';
 
-    $star_id = "VNi0hO6D";#$_GET["starID"];
+    $star_id = $_COOKIE['star_id'];
     $stmt = $conn->prepare("CALL billboard.insertUserMessages(?,?,?,?)");
    
     $stmt->bind_param("ssss", $panel01, $panel02, $panel03, $star_id);
