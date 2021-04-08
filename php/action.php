@@ -35,12 +35,16 @@
    $stmt->execute();
    $result = $stmt->get_result();
    $correctSession = session_id();
-   //comparing the encrypted credentials
+   //comparing the encrypted credentials   
    if($result->num_rows > 0) {
       mysqli_data_seek($result, 0);
       $row = mysqli_fetch_array($result);
       $starID = $row[0];
       setcookie("star_id", $starID, time() + (86400 * 30), "/");
+      $star_ID = $_COOKIE['star_id'];
+      $stmt = $conn->prepare("UPDATE billboard.login SET datetime = NOW() WHERE starID = ?;");
+      $stmt->bind_param('s', $star_ID);
+      $stmt->execute();
       echo 'HTML/home.php?sess='.$correctSession;
    }
    else {
