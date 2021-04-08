@@ -37,3 +37,7 @@ function checkOptions() {
         }
     }
 }
+
+function Suggestions() {
+    var adas = "asda";
+}

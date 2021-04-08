@@ -42,6 +42,7 @@
                                 </td>
                             </tr>
                         </table>
+                        <div id="Suggestions"></div>
                         <!-- Bootstrapped the css of the button. All I have to do is 
                         Call the class of the style I want to use. Makes for simplier
                         and faster programming. -->
