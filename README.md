@@ -1,7 +1,7 @@
 # FULL STACK PROJECT
 
 # DESCRIPTION
-This is a basic full stack project. That sends information REST API infomation over to a specific IP address. The system also logs certain information into the Datbase. This is for beginners who want to know more about a full stack project with PHP, HTML, CSS, JS, and MYSQL. This is by no means perfect or production ready.
+This is a basic full stack project. That sends information REST API infomation over to a specific IP address. The system also logs certain information into the Datbase. This is for beginners who want to know more about a full stack project with PHP, HTML, CSS, JS, and MYSQL. This is by no means perfect or production ready. Any contributions are welcome. Just submit a pull request.
 
 # Reqs
 * Mysql database
