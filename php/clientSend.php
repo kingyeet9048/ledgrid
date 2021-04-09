@@ -42,7 +42,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         </script>
         <div id="content" style="margin: 3rem">
             <div class='alert alert-warning alert-dismissible fade show' role="alert">
-                <p><?php echo $result; ?></p>
+                <p>Message Sent!</p>
             </div>
             <button type="button" class="btn btn-outline-light"  onclick="pageRedirect();">Send Another Message?</button>
         </div>
