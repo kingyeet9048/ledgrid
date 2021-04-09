@@ -13,6 +13,10 @@ This is a basic full stack project. That sends information REST API infomation o
 
 ### Clone the repo.
 
+### Add a file called mysql_pass and enter your username and password on seperate lines (mysql credentials). 
+
+### if your sql server is not running on localhost:3306, change it. 
+
 ### Run the sql script on your mysql database. 
 
 ### Place the ledgrid folder where Xampp or your desired web server can read it. 
