@@ -6,9 +6,7 @@ redirect the user back to the login screen to relogin. -->
     error_reporting (E_ALL & ~ E_NOTICE);
     if(isset($_GET['sess'])) {
         $session = $_GET['sess'];
-        $data = Session::getInstance();
-        $data->startSession();
-        $correctSession = session_id();
+        $correctSession = $_COOKIE['PHPSESSID'];
         if (!($session == $correctSession)) {
             header('Location: ../index.php?failed=2');
         }

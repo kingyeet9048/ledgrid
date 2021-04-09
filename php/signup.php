@@ -33,7 +33,7 @@
                         </select>
                         <div id="newInput"></div>
                         <button class="btn btn-info mt-4 btn-outline-light" type="button" onclick="goBack();">Go Back</button>
-                        <button class="btn btn-info mt-4 btn-outline-light" type="button" onclick="pushSignUp();">Sign up</button>
+                        <button class="btn btn-info mt-4 btn-outline-light" type="button" onclick="pushSignUp(document.getElementById('inputs'));">Sign up</button>
                     </form>
                 </div>
             </div>

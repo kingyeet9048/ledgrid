@@ -41,9 +41,8 @@
       $row = mysqli_fetch_array($result);
       $starID = $row[0];
       setcookie("star_id", $starID, time() + (86400 * 30), "/");
-      $star_ID = $_COOKIE['star_id'];
       $stmt = $conn->prepare("UPDATE billboard.login SET datetime = NOW() WHERE starID = ?;");
-      $stmt->bind_param('s', $star_ID);
+      $stmt->bind_param('s', $starID);
       $stmt->execute();
       echo 'HTML/home.php?sess='.$correctSession;
    }

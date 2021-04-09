@@ -43,6 +43,14 @@
                         </tr>
                         <tr>
                             <td>
+                            <label style=" text-shadow: 0px 0px 1px rgb(255,255,255);">Email</label>
+                            </td>
+                            <td>
+                                <input type="text" id="resetemail" placeholder="Email" required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
                                 <label style=" text-shadow: 0px 0px 1px rgb(255,255,255);">New Password</label>
                             </td>
                             <td>
