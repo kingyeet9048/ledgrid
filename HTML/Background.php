@@ -17,5 +17,3 @@
     </body>
 </html>
 <?php include('../php/sessionchecker.php'); ?>
-
-<!-- hellow rodl -->

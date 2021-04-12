@@ -12,6 +12,7 @@ reuse the head as many times as I want. Makes for more efficient code. -->
     <script src="javascript/ResetPass.js"></script>
     <script src="javascript/signupOptions.js"></script>
 
+
     <!-- MAIN -->
     <link rel="stylesheet" type="text/css" href='../styles/styles.css'>
     <script src="../javascript/EncryptionManager.js"></script>
