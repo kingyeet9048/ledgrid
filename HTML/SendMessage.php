@@ -48,8 +48,10 @@
                         and faster programming. -->
                         <button type="submit" class="btn btn-outline-light" >Submit</button>
                     </form>
+                    <div style="margin-top: 1rem;" id="newCards"></div>
                 </div>
             </div>
         </div>
     </body>
 </html>
+<script src="../javascript/getMessages.js"></script>
