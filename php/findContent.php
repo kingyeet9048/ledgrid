@@ -11,7 +11,7 @@
     $myfile = fopen("../mysql_pass", "r") or die("unable to open file!");
     $mysqlusername = trim(strval(fgets($myfile)));
     $mysqlpassword = trim(strval(fgets($myfile)));
-    $servername = "localhost:3306";
+    $servername = trim(strval(fgets($myfile))).":3306";
 
     $conn = new mysqli($servername, $mysqlusername, $mysqlpassword);
     
@@ -27,7 +27,7 @@
     $starID = $_COOKIE['star_id'];
 
     //Preparing the the statements
-    $stmt = $conn->prepare("select messageTop, messageMiddle, messageBottom FROM billboard.user_messages WHERE starID = ?");
+    $stmt = $conn->prepare("select messageTop, messageMiddle, messageBottom FROM billboard.user_Messages WHERE starID = ?");
     //binds the statement to the variable.
     $stmt->bind_param("s", $starID);
     $stmt->execute();
