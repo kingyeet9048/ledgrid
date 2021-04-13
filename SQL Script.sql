@@ -1,6 +1,6 @@
 
-CREATE SCHEMA IF NOT EXISTS BillBoard;
-USE BillBoard;
+CREATE SCHEMA IF NOT EXISTS billboard;
+USE billboard;
 
 DROP TABLE IF EXISTS students ;
 DROP TABLE IF EXISTS major ;
@@ -78,7 +78,7 @@ ALTER TABLE `user_Messages` ADD FOREIGN KEY (`starID`) REFERENCES `all_users` (`
 ALTER TABLE `login` ADD FOREIGN KEY (`starID`) REFERENCES `all_users` (`starID`);
 
 DELIMITER $$
-CREATE DEFINER=`root`@`localhost` PROCEDURE `insertAUser`(
+CREATE PROCEDURE `insertAUser`(
 IN star_ID VARCHAR(8), 
 IN lName VARCHAR (255), 
 IN fName VARCHAR (255), 
@@ -99,14 +99,14 @@ END$$
 DELIMITER ;
 
 DELIMITER $$
-CREATE DEFINER=`root`@`localhost` PROCEDURE `insertDepartment`(IN department VARCHAR(255))
+CREATE PROCEDURE `insertDepartment`(IN department VARCHAR(255))
 BEGIN
     INSERT INTO billboard.department (departmentName) VALUES (department);
 END$$
 DELIMITER ;
 
 DELIMITER $$
-CREATE DEFINER=`root`@`localhost` PROCEDURE `insertFaculty`(IN deptName VARCHAR (255),IN star_ID VARCHAR (8))
+CREATE PROCEDURE `insertFaculty`(IN deptName VARCHAR (255),IN star_ID VARCHAR (8))
 BEGIN
 
 INSERT INTO billboard.faculty (departmentID, starID) 
@@ -117,7 +117,7 @@ END$$
 DELIMITER ;
 
 DELIMITER $$
-CREATE DEFINER=`root`@`localhost` PROCEDURE `insertMajor`(IN mName VARCHAR (255), IN deptID INT)
+CREATE PROCEDURE `insertMajor`(IN mName VARCHAR (255), IN deptID INT)
 BEGIN
 
 INSERT INTO billboard.major (majorName, departmentID)
@@ -127,7 +127,7 @@ END$$
 DELIMITER ;
 
 DELIMITER $$
-CREATE DEFINER=`root`@`localhost` PROCEDURE `insertStudent`(IN mName VARCHAR (255), IN star_ID VARCHAR (8))
+CREATE PROCEDURE `insertStudent`(IN mName VARCHAR (255), IN star_ID VARCHAR (8))
 BEGIN
 
 INSERT INTO billboard.students (majorID, starID)
@@ -137,7 +137,7 @@ END$$
 DELIMITER ;
 
 DELIMITER $$
-CREATE DEFINER=`root`@`localhost` PROCEDURE `insertUser`(
+CREATE PROCEDURE `insertUser`(
 IN star_ID VARCHAR(8), 
 IN lName VARCHAR (255), 
 IN fName VARCHAR (255), 
@@ -159,10 +159,10 @@ DELIMITER ;
 
 DELIMITER $$
 
-CREATE DEFINER=`root`@`localhost` PROCEDURE `insertUserMessages`(IN messageTop VARCHAR (1000),IN messageMiddle VARCHAR (1000),IN messageBottom VARCHAR (1000),IN star_ID VARCHAR(8))
+CREATE PROCEDURE `insertUserMessages`(IN messageTop VARCHAR (1000),IN messageMiddle VARCHAR (1000),IN messageBottom VARCHAR (1000),IN star_ID VARCHAR(8))
 BEGIN
 SET time_zone = '-05:00';
-INSERT INTO billboard.user_messages (messageTop, messageMiddle, messageBottom, starID, date_Time)
+INSERT INTO billboard.user_Messages (messageTop, messageMiddle, messageBottom, starID, date_Time)
 VALUES (messageTop, messageMiddle, messageBottom, star_ID, NOW());
 
 END$$
