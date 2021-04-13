@@ -15,7 +15,7 @@
                 <div id="content">
                     <!-- Form for sending messages to the clientSend.php file using a secure POST connection.  -->
                     <form action="../php/clientSend.php" method="POST">
-                        <table>
+                        <table style="text-align: center; width: 100%; display: flex; justify-content: space-evenly;">
                             <tr>
                                 <th id="messages">Messages</th>
                                 <th id="panels">Panels</th>
