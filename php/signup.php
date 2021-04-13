@@ -3,6 +3,7 @@
 <html lang="en-US">
     <?php include('../HTML/header.php'); ?>
     <script type="text/javascript">
+        // Goes back to the index.php file. 
         function goBack() {
             window.location.href = "../";
         }
@@ -33,6 +34,7 @@
                         </select>
                         <div id="newInput"></div>
                         <button class="btn btn-info mt-4 btn-outline-light" type="button" onclick="goBack();">Go Back</button>
+                        <!-- push the signup info along as a div containing all of them.-->
                         <button class="btn btn-info mt-4 btn-outline-light" type="button" onclick="pushSignUp(document.getElementById('inputs'));">Sign up</button>
                     </form>
                 </div>

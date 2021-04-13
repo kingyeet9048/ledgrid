@@ -81,5 +81,8 @@
     else {
         echo '../index.php?failed=5';
     }
+    //close the connections since we are done. 
+    $stmt->close();
+    $conn->close();
 
 ?>

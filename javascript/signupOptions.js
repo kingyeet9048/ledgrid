@@ -1,3 +1,4 @@
+// Will add the necessary fields to the signup page depending on what the currently selected option is (student, admin, faculty)
 function checkOptions() {
     var select = document.getElementById("select");
     var curName = select.options[select.selectedIndex].value;
@@ -40,8 +41,4 @@ function checkOptions() {
             selectList.appendChild(option);
         }
     }
-}
-
-function Suggestions() {
-    var adas = "asda";
 }
