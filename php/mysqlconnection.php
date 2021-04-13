@@ -1,4 +1,5 @@
 <?php
+    //CREATES A NEW MYSQL CONNECTION.
 
     $myfile = fopen("mysql_pass", "r") or die("unable to open file!");
     $mysqlusername = trim(strval(fgets($myfile)));

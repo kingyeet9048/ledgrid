@@ -73,4 +73,7 @@
             echo '../index.php?failed=4';
         }
     }
+    //close the connections since we are done. 
+    $stmt->close();
+    $conn->close();
 ?>

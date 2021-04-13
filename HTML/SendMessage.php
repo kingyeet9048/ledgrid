@@ -1,13 +1,19 @@
 <!DOCTYPE html>
 <html lang="en-US">
+    <!-- this links to the header page. All heading info will be loaded into this page. -->
     <?php include('header.php'); ?>
     <body>
+        <!-- The navigation bar will be loaded the same way. -->
         <?php include('navbar.php'); ?>
+        <!-- Will check the url for a valid session id. This will prevent imposters.  -->
         <?php include('../php/sessionchecker.php'); ?>
+        <!-- Main/Container -->
         <div id="main" class="slider">
+            <!-- TITLE -->
             <header class="center" style="font-size: 30px; padding-top: 60px;">WSU CS Project - Send Message</header>
             <div style="text-align: center; width: 100%; display: flex; justify-content: space-evenly;">
                 <div id="content">
+                    <!-- Form for sending messages to the clientSend.php file using a secure POST connection.  -->
                     <form action="../php/clientSend.php" method="POST">
                         <table>
                             <tr>
@@ -48,10 +54,12 @@
                         and faster programming. -->
                         <button type="submit" class="btn btn-outline-light" >Submit</button>
                     </form>
+                    <!-- Empty div here so all new suggestions can be added via javascript (createElement) -->
                     <div style="margin-top: 1rem;" id="newCards"></div>
                 </div>
             </div>
         </div>
     </body>
 </html>
+<!-- This javascript file is loaded every render of the page. Will add suggestions if there are any to add.  -->
 <script src="../javascript/getMessages.js"></script>

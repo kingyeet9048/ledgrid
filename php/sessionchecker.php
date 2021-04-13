@@ -12,7 +12,8 @@ redirect the user back to the login screen to relogin. -->
         }
     }
     else {
-        // unset cookies
+        // unset cookies.
+        //Makes the cookies expire if they exist. 
         if (isset($_SERVER['HTTP_COOKIE'])) {
             $cookies = explode(';', $_SERVER['HTTP_COOKIE']);
             foreach($cookies as $cookie) {

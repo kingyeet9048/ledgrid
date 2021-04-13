@@ -3,6 +3,7 @@
     <!-- Include the head -->
     <?php include('HTML/header.php'); ?>
     <body>
+        <!-- will submi the form on enter.  -->
         <script>
             $(document).ready(function(){
                 $('#username').keypress(function(e){
@@ -63,6 +64,7 @@
                     echo '<script>document.getElementById("p1").innerHTML = "The code you entered is not correct. Please try again.";</script>';
                 }
             }
+            // Remove all cookies if they exist. 
             if (isset($_SERVER['HTTP_COOKIE'])) {
                 $cookies = explode(';', $_SERVER['HTTP_COOKIE']);
                 foreach($cookies as $cookie) {

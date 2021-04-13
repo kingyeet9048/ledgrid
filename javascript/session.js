@@ -1,3 +1,4 @@
+//These function are from w3shools on adding, getting, and removing a cookie. 
 function setCookie(cname, cvalue, exdays) {
     var d = new Date();
     d.setTime(d.getTime() + (exdays*24*60*60*1000));
@@ -35,5 +36,9 @@ function eraseCookie(name) {
   setCookie(name,"",-1);
 }
 
+// start a timer. When the timer ends
+// the resetSession will return the user to the 
+//index and their cookies will be deleted. 
+// This is to prevent idling. 
 console.log('Starting Timer...');
 setTimeout(resetSession, 300000);
