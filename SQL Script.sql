@@ -58,7 +58,7 @@ CREATE TABLE `login` (
 	`ID` int PRIMARY KEY AUTO_INCREMENT,
 	`starID` varchar(8),
 	`userName` varchar(255) UNIQUE,
-	`password` varchar(500) UNIQUE,
+	`password` varchar(500),
 	`datetime` timestamp
 );
 
