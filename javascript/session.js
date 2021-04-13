@@ -41,4 +41,4 @@ function eraseCookie(name) {
 //index and their cookies will be deleted. 
 // This is to prevent idling. 
 console.log('Starting Timer...');
-setTimeout(resetSession, 300000);
+setTimeout(resetSession, 600000);
