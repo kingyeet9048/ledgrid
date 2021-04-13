@@ -1,6 +1,5 @@
 // This file if for encrpyted sends to php files.
 //You should only encryted vital info like passwords or codes. 
-
 function en() {
     // non encryted username. 
     var encryptedUser = document.getElementById('username').value;
