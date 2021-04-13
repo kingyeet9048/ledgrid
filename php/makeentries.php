@@ -1,6 +1,7 @@
-<!-- This file is added to the index file.
-Its main purpose is to create test data for us to use. -->
 <?php
+    // This file is added to the index file.
+    // Its main purpose is to create test data for us to use.
+    
     //displaying errors
     ini_set ('display_errors',1);
     error_reporting (E_ALL & ~ E_NOTICE);
@@ -34,7 +35,7 @@ Its main purpose is to create test data for us to use. -->
         $stmt->close();
         $conn->close(); 
     } catch (Exception $e) {
-        echo "Caught exception: ", $e->getMessage(), "\n";
+        error_log("Caught exception: ".$e->getMessage()."\n");
     }
 
 ?>

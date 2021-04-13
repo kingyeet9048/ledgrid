@@ -3,7 +3,6 @@
     <!-- Include the head -->
     <?php include('HTML/header.php'); ?>
     <body>
-        <!-- will submi the form on enter.  -->
         <script>
             $(document).ready(function(){
                 $('#username').keypress(function(e){
@@ -19,9 +18,7 @@
             });
         </script>
         <!-- Entire page -->
-        <?php include('php/makeentries.php'); ?>
         <div class='main'>
-            
             <!-- Anything that has to do with the login. -->
             <div id="loginContainer">
             <header class="center" style="margin-bottom: -65px">WSU CS Project - LedGrid</header>
@@ -45,8 +42,9 @@
                 <a href="php/ResetPassword.php">Reset Password</a>
             </div>
         </div>
-        <!-- Variables will be by the url for failed login or timeout.  -->
-        <?php 
+        <?php
+            // include('php/makeentries.php');
+            // Variables will be by the url for failed login or timeout.
             if(isset($_GET['failed'])) {
                 if($_GET['failed'] == 1) {
                     echo '<script>document.getElementById("p1").innerHTML = "Username or password is incorrect. Please try again.";</script>';
@@ -64,7 +62,6 @@
                     echo '<script>document.getElementById("p1").innerHTML = "The code you entered is not correct. Please try again.";</script>';
                 }
             }
-            // Remove all cookies if they exist. 
             if (isset($_SERVER['HTTP_COOKIE'])) {
                 $cookies = explode(';', $_SERVER['HTTP_COOKIE']);
                 foreach($cookies as $cookie) {

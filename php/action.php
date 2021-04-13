@@ -2,9 +2,6 @@
    //displaying errors
    ini_set ('display_errors',1);
    error_reporting (E_ALL & ~ E_NOTICE);
-   // Will start the session. 
-   include("SessionHandler.php");
-   $data = Session::getInstance();
    //gettting the raw data from xmlhttpsrequest
    $rawdata = file_get_contents("php://input");
    $decodedData = json_decode($rawdata);
@@ -26,7 +23,7 @@
        echo "Error: Unable to connect to MYSQL."."<br>\n";
        echo "Debugging errno: ".mysqli_connect_errno()."<br>\n";
        echo "Debugging error: ".mysqli_connect_error()."<br>\n";
-       die("Connection failed: ".mysqli_error());
+       die("Connection failed: ");
    }
 
    //Preparing the the statements
@@ -36,7 +33,6 @@
    $stmt->execute();
    //getting the result set. 
    $result = $stmt->get_result();
-   $correctSession = session_id();
    //comparing the encrypted credentials   
    // if there are rows returned...
    if($result->num_rows > 0) {
@@ -50,7 +46,11 @@
       $stmt = $conn->prepare("UPDATE billboard.login SET datetime = NOW() WHERE starID = ?;");
       $stmt->bind_param('s', $starID);
       $stmt->execute();
+      // Will start the session. 
+      include("SessionHandler.php");
+      $data = Session::getInstance();
       //echo a url with the session id.
+      $correctSession = session_id();
       echo 'HTML/home.php?sess='.$correctSession;
    }
    //no result set was found.
