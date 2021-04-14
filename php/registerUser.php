@@ -19,7 +19,7 @@
     $myfile = fopen("../mysql_pass", "r") or die("unable to open file!");
     $mysqlusername = trim(strval(fgets($myfile)));
     $mysqlpassword = trim(strval(fgets($myfile)));
-    $servername = "localhost:3306";
+    $servername = trim(strval(fgets($myfile))).":3306";
 
     $conn = new mysqli($servername, $mysqlusername, $mysqlpassword);
     
@@ -81,5 +81,8 @@
     else {
         echo '../index.php?failed=5';
     }
+    //close the connections since we are done. 
+    $stmt->close();
+    $conn->close();
 
 ?>

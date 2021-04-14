@@ -3,6 +3,7 @@
 <html lang="en-US">
     <?php include('../HTML/header.php'); ?>
     <body>
+        <!-- will send the form on the enter key -->
         <script>
             $(document).ready(function(){
                 $('#CP').keypress(function(e){
