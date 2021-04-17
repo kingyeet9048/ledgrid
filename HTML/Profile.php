@@ -49,3 +49,4 @@
         </div>
     </body>
 </html>
+<script src="../javascript/getProfile.js"></script>
