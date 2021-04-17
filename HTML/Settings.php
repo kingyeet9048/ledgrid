@@ -14,9 +14,9 @@
             <div id="content">
                 <a href="../index.php" onclick="remove()">LOGOUT</a>
                 <br>
-                <a href="Profile.php">Profile Information</a>
+                <a href="<?php echo "Profile.php".getSession();?>">Profile Information</a>
                 <br>
-                <a href="AllMessages.php">ALL Messages (Admin only)</a>
+                <a href="<?php echo "AllMessages.php".getSession();?>">ALL Messages (Admin only)</a>
             </div>
         </div>
     </body>
