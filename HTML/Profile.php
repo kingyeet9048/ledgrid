@@ -14,8 +14,8 @@
             <div id="content">
                 <table style="text-align: center; width: 100%; display: flex; justify-content: space-evenly;">
                     <tr>
-                        <th id="messages">Field</th>
-                        <th id="panels">Content</th>
+                        <th id="field">Field</th>
+                        <th id="content">Content</th>
                     </tr>
                     <tr>
                         <td>
