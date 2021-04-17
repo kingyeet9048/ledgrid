@@ -13,8 +13,21 @@
             <header class="center" style="font-size: 30px; padding-top: 60px;">WSU CS Project - All messages</header>
             <div id="content">
                 <p>Messages will populate here. Only admins will be able to view them. If you are not an admin, you wont see them.</p>
-                <div id="Admin Messages"></div>
+                <div id="AdminMessages">
+                <table id="table" style="text-align: center; width: 100%; display: flex; justify-content: space-evenly;">
+                    <tr>
+                        <th id="t">T</th>
+                        <th id="m">M</th>
+                        <th id="b">B</th>
+                        <th id="s">StarID</th>
+                        <th id="d">Date</th>
+                        <th id="n">Name</th>
+                        <th id="r">Role</th>
+                    </tr>
+                </table>
+                </div>
             </div>
         </div>
     </body>
 </html>
+<script src="../javascript/getAllMessages.js"></script>

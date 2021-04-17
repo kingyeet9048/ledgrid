@@ -16,8 +16,9 @@
                 <br>
                 <a href="<?php echo "Profile.php".getSession();?>">Profile Information</a>
                 <br>
-                <a href="<?php echo "AllMessages.php".getSession();?>">ALL Messages (Admin only)</a>
+                <a id="admin">ALL Messages (Admin only)</a>
             </div>
         </div>
     </body>
 </html>
+<script src="../javascript/isAdmin.js"></script>

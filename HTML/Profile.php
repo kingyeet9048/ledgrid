@@ -44,6 +44,15 @@
                             <br>
                         </td>
                     </tr>
+                    <tr>
+                        <td>
+                            <label for="starid">Star ID</label>
+                        </td>
+                        <td>
+                            <p id="starid"></p>
+                            <br>
+                        </td>
+                    </tr>
                 </table>
             </div>
         </div>

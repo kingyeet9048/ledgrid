@@ -1,3 +1,18 @@
+function getCookie(cname) {
+    var name = cname + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    for(var i = 0; i <ca.length; i++) {
+      var c = ca[i];
+      while (c.charAt(0) == ' ') {
+        c = c.substring(1);
+      }
+      if (c.indexOf(name) == 0) {
+        return c.substring(name.length, c.length);
+      }
+    }
+    return "";
+}
 var xhr = new XMLHttpRequest();
 xhr.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
@@ -8,16 +23,14 @@ xhr.onreadystatechange = function() {
             //gonna do it. We are splitting the recieved info by
             // %%  - all the rows and %^% -- panel number
             var results = this.responseText.toString().split("%^%");
-            var ids = ['name', 'role', 'email', 'starid'];
-            document.getElementById(ids[0]).innerHTML = results[1] + " " + results[2];
-            document.getElementById(ids[1]).innerHTML = results[3];
-            document.getElementById(ids[2]).innerHTML = results[4];
-            document.getElementById(ids[3]).innerHTML = results[0];
+            if (results[0] == "Admin") {
+                document.getElementById("admin").href = "AllMessages.php?sess=" + getCookie("PHPSESSID");
+            }
         }
 
     }
 };
-xhr.open("POST", '../php/callProfile.php', true);
+xhr.open("POST", '../php/checkadmin.php', true);
 xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 xhr.send(JSON.stringify({}));
 
