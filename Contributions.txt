@@ -1,0 +1,5 @@
+Fahad - SQL SCRIPT.SQL, Built DB, SentMessages.php, Timout logic, makeentries.php
+Sully - DESIGNED DB, Session logic, Login (signup, password), Software Architure, Encryption
+Ally - Website Design (html,css), Settings (AllMessages)
+Marsh - Website Design (Helped ally), Settings (Profile)
+ALL (extra) - Connected it to the actual billboard and it worked.
