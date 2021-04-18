@@ -16,20 +16,8 @@
     //getting the raw sha256 output for userType
     $userType = $decodedData->userType;
 
-    $myfile = fopen("../mysql_pass", "r") or die("unable to open file!");
-    $mysqlusername = trim(strval(fgets($myfile)));
-    $mysqlpassword = trim(strval(fgets($myfile)));
-    $servername = trim(strval(fgets($myfile))).":3306";
-
-    $conn = new mysqli($servername, $mysqlusername, $mysqlpassword);
-    
-    //checking connection
-    if($conn->connect_error) {
-        echo "Error: Unable to connect to MYSQL."."<br>\n";
-        echo "Debugging errno: ".mysqli_connect_errno()."<br>\n";
-        echo "Debugging error: ".mysqli_connect_error()."<br>\n";
-        die("Connection failed: ".mysqli_error());
-    }
+    // starting connection
+    include('mysqlembeddedconn.php');
 
     function generateRandomString($length) {
         $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
@@ -42,8 +30,8 @@
     }
 
     $starID = generateRandomString(8);
-    $stmt = $conn->prepare("select * FROM billboard.all_users WHERE email = ?");
-    $stmt->bind_param("s", $decodedData->email);
+    $stmt = $conn->prepare("select * FROM billboard.all_users AS AU JOIN billboard.login AS L ON AU.starID = L.starID WHERE AU.email = ? OR L.userName = ?;");
+    $stmt->bind_param("ss", $decodedData->email, $decodedData->username);
     $stmt->execute();
     $result = $stmt->get_result();
     //access code

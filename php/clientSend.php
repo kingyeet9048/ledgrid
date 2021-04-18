@@ -1,40 +1,27 @@
 <?php
 
-//creating connection to MySQL
-$myfile = fopen("../mysql_pass", "r") or die("unable to open file!");
-$mysqlusername = trim(strval(fgets($myfile)));
-$mysqlpassword = trim(strval(fgets($myfile)));
-$servername = trim(strval(fgets($myfile))).":3306";
+    //creating connection to MySQL
+    include('mysqlembeddedconn.php');
 
-$conn = new mysqli($servername, $mysqlusername, $mysqlpassword);
+    if($_SERVER["REQUEST_METHOD"] == "POST") {
+        //If input is null return empty space.
+        $panel01 = $_POST['panel01'] != '' ? $_POST['panel01'] : ' ';
+        $panel02 = $_POST['panel02'] != '' ? $_POST['panel02'] : ' ';
+        $panel03 = $_POST['panel03'] != '' ? $_POST['panel03'] : ' ';
 
-//checking connection
-if($conn->connect_error) {
-    echo "Error: Unable to connect to MYSQL."."<br>\n";
-    echo "Debugging errno: ".mysqli_connect_errno()."<br>\n";
-    echo "Debugging error: ".mysqli_connect_error()."<br>\n";
-    die("Connection failed: ".mysqli_error());
-}
+        // Getting the star ID from a cookie. 
+        $star_id = $_COOKIE['star_id'];
+        // calling a stored procedure. 
+        $stmt = $conn->prepare("CALL billboard.insertUserMessages(?,?,?,?)");
+        // this bind is the same as setting the question marks to a variable. 
+        // s means string. 
+        $stmt->bind_param("ssss", $panel01, $panel02, $panel03, $star_id);
+        $stmt->execute();
 
-if($_SERVER["REQUEST_METHOD"] == "POST") {
-    //If input is null return empty space.
-    $panel01 = $_POST['panel01'] != '' ? $_POST['panel01'] : ' ';
-    $panel02 = $_POST['panel02'] != '' ? $_POST['panel02'] : ' ';
-    $panel03 = $_POST['panel03'] != '' ? $_POST['panel03'] : ' ';
-
-    // Getting the star ID from a cookie. 
-    $star_id = $_COOKIE['star_id'];
-    // calling a stored procedure. 
-    $stmt = $conn->prepare("CALL billboard.insertUserMessages(?,?,?,?)");
-    // this bind is the same as setting the question marks to a variable. 
-    // s means string. 
-    $stmt->bind_param("ssss", $panel01, $panel02, $panel03, $star_id);
-    $stmt->execute();
-
-    //close the connections since we are done. 
-    $stmt->close();
-    $conn->close(); 
-}
+        //close the connections since we are done. 
+        $stmt->close();
+        $conn->close(); 
+    }
 ?>
 
 <!-- Web page returned after a tried send. -->

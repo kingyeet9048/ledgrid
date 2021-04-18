@@ -13,7 +13,7 @@
         echo "Error: Unable to connect to MYSQL."."<br>\n";
         echo "Debugging errno: ".mysqli_connect_errno()."<br>\n";
         echo "Debugging error: ".mysqli_connect_error()."<br>\n";
-        die("Connection failed: ".mysqli_error());
+        die("Connection failed: ".mysqli_error($conn));
     }
 
 ?>

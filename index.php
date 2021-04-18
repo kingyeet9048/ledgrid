@@ -43,7 +43,7 @@
             </div>
         </div>
         <?php
-            include('php/makeentries.php');
+            // include('php/makeentries.php');
             // Variables will be by the url for failed login or timeout.
             if(isset($_GET['failed'])) {
                 if($_GET['failed'] == 1) {
@@ -56,7 +56,7 @@
                     echo '<script>document.getElementById("p1").innerHTML = "Password change failed. ";</script>';
                 }
                 else if ($_GET['failed'] == 4){
-                    echo '<script>document.getElementById("p1").innerHTML = "Please use a different email.";</script>';
+                    echo '<script>document.getElementById("p1").innerHTML = "Please use a different email or username.";</script>';
                 }
                 else if ($_GET['failed'] == 5){
                     echo '<script>document.getElementById("p1").innerHTML = "The code you entered is not correct. Please try again.";</script>';
