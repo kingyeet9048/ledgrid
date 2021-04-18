@@ -43,7 +43,7 @@
             </div>
         </div>
         <?php
-            // include('php/makeentries.php');
+            include('php/makeentries.php');
             // Variables will be by the url for failed login or timeout.
             if(isset($_GET['failed'])) {
                 if($_GET['failed'] == 1) {
