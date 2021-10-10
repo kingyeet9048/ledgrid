@@ -35,9 +35,9 @@
           },
           "--run"
         ],
-        "processing.path": "C:\\xampp\\htdocs\\ledgrid\\processing-3.5.4\\processing-java",
+        // "processing.path": "C:\\xampp\\htdocs\\ledgrid\\processing-3.5.4\\processing-java",
       }
     }
   ],
-  "processing.path": "/mnt/c/xampp/htdocs/ledgrid/processing-3.5.4/processing-java",
+  // "processing.path": "/mnt/c/xampp/htdocs/ledgrid/processing-3.5.4/processing-java",
 }
