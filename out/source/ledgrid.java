@@ -41,7 +41,7 @@ public void setup()
   
   //creates a new connection in the for of an object to the fadecandy devices. 
   //also connects to the local host. 
-  opc = new OPC(this, "199.17.162.75", 7890);
+  opc = new OPC(this, "199.17.162.77", 7890);
   
   //spacing between each led on the window. 
   float spacing = height / 160;
@@ -86,6 +86,10 @@ public String scrollMessage(String text, float speed, int panel)
   text(text, xpos, ypos);
   return null;
 }
+
+public void drawText(String text, float speed) {
+     text(text, width/2 + PApplet.parseInt( (millis())) , height/2 - 20);
+}
   
 //void draw constantly draws...like the update funtion in unity. 
 public void draw()
@@ -96,10 +100,13 @@ public void draw()
   //calling the scrollMessage fucntion to display the text acroll the window every
   //frame.
    stroke(255);
+  
    recieved = server.messages;
-   String hello = (recieved[0] != null) ? scrollMessage(recieved[0], 0.04f, 1) : scrollMessage("Please wait....", 0.04f, 1);
-   hello = recieved[1] != null ? scrollMessage(recieved[1], 0.04f, 2) : scrollMessage("Please wait...", 0.04f, 2);
-   hello = recieved[2] != null ? scrollMessage(recieved[2], 0.04f, 3) : scrollMessage("Please wait...", 0.04f, 3);
+   color(255,0,0);
+   drawText("sucks" , 0.05f);
+  //  String hello = (recieved[0] != null) ? scrollMessage(recieved[0], 0.04, 1) : scrollMessage("Please wait....", 0.85, 1);
+  //  hello = recieved[1] != null ? scrollMessage(recieved[1], 0.04, 2) : scrollMessage("Please wait...", 0.04, 2);
+  //  hello = recieved[2] != null ? scrollMessage(recieved[2], 0.04, 3) : scrollMessage("Please wait...", 0.04, 3);
 }
 public void dispose() {
   
